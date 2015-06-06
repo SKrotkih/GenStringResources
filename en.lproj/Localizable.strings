@@ -1,0 +1,145 @@
+
+/* Apply data (save data to the strings and XIB tabs) */
+"Apply data (save data to the strings and XIB tabs)" = "Apply data (save data to the strings and XIB tabs)";
+
+/* Apply data (save the new strings resources to the project) */
+"Apply data (save the new strings resources to the project)" = "Apply data (save the new strings resources to the project)";
+
+/* Apply data (save the new strings to the project '%@') */
+"Apply data (save the new strings to the project '%@')" = "Apply data (save the new strings to the project '%@')";
+
+/* Apply data (save translated data) */
+"Apply data (save translated data)" = "Apply data (save translated data)";
+
+/* Can't execute command. Return code is %d */
+"Can't execute command. Return code is %d" = "Can't execute command. Return code is %d";
+
+/* Comment */
+"Comment" = "Comment";
+
+/* Continue */
+"Continue" = "Continue";
+
+/* Data didn't found. */
+"Data didn't found." = "Data didn't found.";
+
+/* Data didn't save */
+"Data didn't save" = "Data didn't save";
+
+/* Data didn't save! */
+"Data didn't save!" = "Data didn't save!";
+
+/* Data didn't save! May be list for save is empty. */
+"Data didn't save! May be list for save is empty." = "Data didn't save! May be list for save is empty.";
+
+/* Data saved successfully */
+"Data saved successfully" = "Data saved successfully";
+
+/* Data saved to the directory '%@' */
+"Data saved to the directory '%@'" = "Data saved to the directory '%@'";
+
+/* Data were applyed. */
+"Data were applyed." = "Data were applyed.";
+
+/* Directory '%@' doesn't exist! */
+"Directory '%@' doesn't exist!" = "Directory '%@' doesn't exist!";
+
+/* English string */
+/* English string column name */
+"English string" = "English string";
+
+/* Error */
+"Error" = "Error";
+
+/* File '%@' isn't exist! */
+"File '%@' isn't exist!" = "File '%@' isn't exist!";
+
+/* Load strings from a file of the localizable.strings type */
+"Load strings from a file of the localizable.strings type" = "Load strings from a file of the localizable.strings type";
+
+/* Load strings from a file of the plist type */
+"Load strings from a file of the plist type" = "Load strings from a file of the plist type";
+
+/* Merge strings from a file of the localizable.strings format */
+"Merge strings from a file of the localizable.strings format" = "Merge strings from a file of the localizable.strings format";
+
+/* New localizable.strings saved to the project */
+"New localizable.strings saved to the project" = "New localizable.strings saved to the project";
+
+/* New strings saved to the project '%@' */
+"New strings saved to the project '%@'" = "New strings saved to the project '%@'";
+
+/* No issues */
+"No issues" = "No issues";
+
+/* Open Succeeded */
+"Open Succeeded" = "Open Succeeded";
+
+/* Please check settings about directory path to the projects. */
+"Please check settings about directory path to the projects." = "Please check settings about directory path to the projects.";
+
+/* Please start to scan XIBs. */
+"Please start to scan XIBs." = "Please start to scan XIBs.";
+
+/* Project */
+"Project" = "Project";
+
+/* Reload data from temporary file */
+"Reload data from temporary file" = "Reload data from temporary file";
+
+/* Reload data from the temporary file */
+"Reload data from the temporary file" = "Reload data from the temporary file";
+
+/* Save */
+"Save" = "Save";
+
+/* Save as file of the ibtool format type */
+"Save as file of the ibtool format type" = "Save as file of the ibtool format type";
+
+/* Save as file of the localizable.strings type */
+"Save as file of the localizable.strings type" = "Save as file of the localizable.strings type";
+
+/* Save as file of the property list (plist) type */
+"Save as file of the property list (plist) type" = "Save as file of the property list (plist) type";
+
+/* Save as... */
+"Save as..." = "Save as...";
+
+/* Save data to the temporary file */
+"Save data to the temporary file" = "Save data to the temporary file";
+
+/* Scan Succeeded */
+"Scan Succeeded" = "Scan Succeeded";
+
+/* Search similar strings */
+"Search similar strings" = "Search similar strings";
+
+/* Select NEW tab and choise 'Reload data' from context menu */
+"Select NEW tab and choise 'Reload data' from context menu" = "Select NEW tab and choise 'Reload data' from context menu";
+
+/* Settings data changed, but didn't save.\nWould you like save the changes? */
+"Settings data changed, but didn't save.\nWould you like save the changes?" = "Settings data changed, but didn't save.\nWould you like save the changes?";
+
+/* The data lists for import to the XIBs are empty! */
+"The data lists for import to the XIBs are empty!" = "The data lists for import to the XIBs are empty!";
+
+/* Translate Succeeded */
+"Translate Succeeded" = "Translate Succeeded";
+
+/* Translate it! */
+"Translate it!" = "Translate it!";
+
+/* Translation */
+"Translation" = "Translation";
+
+/* Warning! */
+"Warning!" = "Warning!";
+
+/* Work directory changed, but didn't save.\nWould you like save the change? */
+"Work directory changed, but didn't save.\nWould you like save the change?" = "Work directory changed, but didn't save.\nWould you like save the change?";
+
+/* You may move to the 'no translate' of tab Strings or XIBs and apply 'Reload data'. */
+"You may move to the 'no translate' of tab Strings or XIBs and apply 'Reload data'." = "You may move to the 'no translate' of tab Strings or XIBs and apply 'Reload data'.";
+
+/* No comment provided by engineer. */
+"name" = "name";

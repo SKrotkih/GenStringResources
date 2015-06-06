@@ -1,0 +1,12 @@
+//
+// Prefix header for all source files of the 'GenStringResources' target in the 'GenStringResources' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#import "QOLocalizableStringsController.h"
+
+#define MAINWINDOW [QOLocalizableStringsController appController].window
+

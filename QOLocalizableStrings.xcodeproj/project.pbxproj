@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		256AC3DA0F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m */; };
+		7F39FF8D1330BE8100CE89EE /* QOStringsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */; };
+		7F3D477B1331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D47781331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m */; };
+		7F3D477C1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */; };
+		7F5D16DC132E5CB4008BF0A8 /* QOSummaryStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */; };
+		7F5D1769132E7754008BF0A8 /* QOSummaryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */; };
+		7F640073167B201C004B5645 /* CopyingModulesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F640072167B201C004B5645 /* CopyingModulesWindowController.m */; };
+		7F640076167B32CE004B5645 /* CopyingModulesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F640074167B32CE004B5645 /* CopyingModulesWindowController.xib */; };
+		7F9795241316A716007442FD /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F9795231316A716007442FD /* Projects.plist */; };
+		7FB20BAC16790EC000E88AC8 /* buildproject.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CE4545321388DC27006D4F8B /* buildproject.scpt */; };
+		8D11072B0486CEB800E47090 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* Localizable.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CE0F8DB8138FC07C0086E170 /* SyntaxColorDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DB6138FC07C0086E170 /* SyntaxColorDefaults.plist */; };
+		CE0F8DB9138FC07C0086E170 /* SyntaxDefinition.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DB7138FC07C0086E170 /* SyntaxDefinition.plist */; };
+		CE0F8DC9138FC10D0086E170 /* CSS 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC4138FC10D0086E170 /* CSS 1.plist */; };
+		CE0F8DCA138FC10D0086E170 /* HTML (Old).plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC5138FC10D0086E170 /* HTML (Old).plist */; };
+		CE0F8DCB138FC10D0086E170 /* HTML.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC6138FC10D0086E170 /* HTML.plist */; };
+		CE0F8DCC138FC10D0086E170 /* Objective C (Old).plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC7138FC10D0086E170 /* Objective C (Old).plist */; };
+		CE0F8DCD138FC10D0086E170 /* Objective C.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC8138FC10D0086E170 /* Objective C.plist */; };
+		CE28B76613465166007AC551 /* QOLocalizableStringsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE28B76513465166007AC551 /* QOLocalizableStringsTableView.m */; };
+		CE4544B413880DB4006D4F8B /* TCallScript.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4544B313880DB4006D4F8B /* TCallScript.m */; };
+		CE4544EC13884866006D4F8B /* ProjectTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4544EA13884866006D4F8B /* ProjectTreeViewController.xib */; };
+		CE4544F013884E66006D4F8B /* QOProjectTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4544EF13884E66006D4F8B /* QOProjectTreeViewController.m */; };
+		CE4545061388C239006D4F8B /* QOModuleStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4545051388C239006D4F8B /* QOModuleStrings.m */; };
+		CE4545151388D80D006D4F8B /* AEDescUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4545141388D80D006D4F8B /* AEDescUtils.m */; };
+		CE61954713417A2F00330B54 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61954613417A2F00330B54 /* SettingsWindow.xib */; };
+		CE61958C1341829300330B54 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CE61958B1341829300330B54 /* ReadMe.rtf */; };
+		CE7DBF91138E097300A0E4EB /* xcodebuild.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7DBF90138E097300A0E4EB /* xcodebuild.plist */; };
+		CE82657B1326014B000A2884 /* QOXIBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82657A1326014B000A2884 /* QOXIBTableView.m */; };
+		CE861D7913152B8C00ADCCC8 /* icon.ico in Resources */ = {isa = PBXBuildFile; fileRef = CE861D7813152B8C00ADCCC8 /* icon.ico */; };
+		CE861D851315428D00ADCCC8 /* icon512.icns in Resources */ = {isa = PBXBuildFile; fileRef = CE861D841315428D00ADCCC8 /* icon512.icns */; };
+		CE861DDD131550CA00ADCCC8 /* QOSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE861DDC131550CA00ADCCC8 /* QOSettingsController.m */; };
+		CE861E631315A57A00ADCCC8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE861E621315A57A00ADCCC8 /* Properties.plist */; };
+		CE86B399133F437500935937 /* QOCompareStrings.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE86B398133F437500935937 /* QOCompareStrings.mm */; };
+		CE88F742130E234500D366CA /* QOSharedLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE88F741130E234500D366CA /* QOSharedLibrary.m */; };
+		CE8CD67F13265F68008198F1 /* QOLocalizableStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD67E13265F68008198F1 /* QOLocalizableStrings.m */; };
+		CE8CD68213265F92008198F1 /* QOLocalizableXIBStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */; };
+		CE8CD68513266785008198F1 /* QOPlistProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD68413266785008198F1 /* QOPlistProcessing.m */; };
+		CE8FB9111389343700FC49F4 /* QOxcodeprojOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8FB9101389343700FC49F4 /* QOxcodeprojOutlineView.m */; };
+		CE961877138F857B0089C324 /* QOColoredSyntaxTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE961876138F857B0089C324 /* QOColoredSyntaxTextView.m */; };
+		CE96187D138F86730089C324 /* NSArray+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CE96187C138F86730089C324 /* NSArray+Color.m */; };
+		CE961880138F869D0089C324 /* NSScanner+SkipUpToCharset.m in Sources */ = {isa = PBXBuildFile; fileRef = CE96187F138F869D0089C324 /* NSScanner+SkipUpToCharset.m */; };
+		CEA633F313080696000F5CE3 /* QOLocalizableStringsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA633F213080696000F5CE3 /* QOLocalizableStringsController.mm */; };
+		CEA6342313080CDB000F5CE3 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA6342213080CDB000F5CE3 /* Automator.framework */; };
+		CEB314151321F19D00E751E7 /* QOTranslateStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB314141321F19D00E751E7 /* QOTranslateStrings.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		256AC3D80F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStringsAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableStringsAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* QOLocalizableStrings_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStrings_Prefix.pch; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7F39FF8B1330BE8100CE89EE /* QOStringsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOStringsTableView.h; sourceTree = "<group>"; };
+		7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOStringsTableView.m; sourceTree = "<group>"; };
+		7F3D47771331FAFE00A2D1E2 /* QOLocalizableStringsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QOLocalizableStringsTextView.h; path = Arch/QOLocalizableStringsTextView.h; sourceTree = "<group>"; };
+		7F3D47781331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QOLocalizableStringsTextView.m; path = Arch/QOLocalizableStringsTextView.m; sourceTree = "<group>"; };
+		7F3D47791331FAFE00A2D1E2 /* QOLocalizableXIBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QOLocalizableXIBTextView.h; path = Arch/QOLocalizableXIBTextView.h; sourceTree = "<group>"; };
+		7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QOLocalizableXIBTextView.m; path = Arch/QOLocalizableXIBTextView.m; sourceTree = "<group>"; };
+		7F5D16DA132E5CB4008BF0A8 /* QOSummaryStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOSummaryStrings.h; sourceTree = "<group>"; };
+		7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOSummaryStrings.m; sourceTree = "<group>"; };
+		7F5D1767132E7754008BF0A8 /* QOSummaryTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOSummaryTableView.h; sourceTree = "<group>"; };
+		7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOSummaryTableView.m; sourceTree = "<group>"; };
+		7F640071167B201C004B5645 /* CopyingModulesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyingModulesWindowController.h; sourceTree = "<group>"; };
+		7F640072167B201C004B5645 /* CopyingModulesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyingModulesWindowController.m; sourceTree = "<group>"; };
+		7F640075167B32CE004B5645 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CopyingModulesWindowController.xib; sourceTree = "<group>"; };
+		7F640077167B32E9004B5645 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/CopyingModulesWindowController.xib; sourceTree = "<group>"; };
+		7F9795231316A716007442FD /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Projects.plist; path = Res/Projects.plist; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* QOLocalizableStrings-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QOLocalizableStrings-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* QOLocalizableStrings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QOLocalizableStrings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE05AFA013878387003233C9 /* buildproject.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = buildproject.applescript; path = Applescript/buildproject.applescript; sourceTree = "<group>"; };
+		CE0F8DB6138FC07C0086E170 /* SyntaxColorDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SyntaxColorDefaults.plist; sourceTree = "<group>"; };
+		CE0F8DB7138FC07C0086E170 /* SyntaxDefinition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SyntaxDefinition.plist; sourceTree = "<group>"; };
+		CE0F8DC4138FC10D0086E170 /* CSS 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CSS 1.plist"; sourceTree = "<group>"; };
+		CE0F8DC5138FC10D0086E170 /* HTML (Old).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HTML (Old).plist"; sourceTree = "<group>"; };
+		CE0F8DC6138FC10D0086E170 /* HTML.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HTML.plist; sourceTree = "<group>"; };
+		CE0F8DC7138FC10D0086E170 /* Objective C (Old).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Objective C (Old).plist"; sourceTree = "<group>"; };
+		CE0F8DC8138FC10D0086E170 /* Objective C.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Objective C.plist"; sourceTree = "<group>"; };
+		CE28B76413465166007AC551 /* QOLocalizableStringsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStringsTableView.h; sourceTree = "<group>"; };
+		CE28B76513465166007AC551 /* QOLocalizableStringsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableStringsTableView.m; sourceTree = "<group>"; };
+		CE4544B213880DB4006D4F8B /* TCallScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCallScript.h; sourceTree = "<group>"; };
+		CE4544B313880DB4006D4F8B /* TCallScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCallScript.m; sourceTree = "<group>"; };
+		CE4544EB13884866006D4F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectTreeViewController.xib; sourceTree = "<group>"; };
+		CE4544EE13884E66006D4F8B /* QOProjectTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOProjectTreeViewController.h; sourceTree = "<group>"; };
+		CE4544EF13884E66006D4F8B /* QOProjectTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOProjectTreeViewController.m; sourceTree = "<group>"; };
+		CE4545041388C239006D4F8B /* QOModuleStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOModuleStrings.h; sourceTree = "<group>"; };
+		CE4545051388C239006D4F8B /* QOModuleStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOModuleStrings.m; sourceTree = "<group>"; };
+		CE4545131388D80D006D4F8B /* AEDescUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDescUtils.h; sourceTree = "<group>"; };
+		CE4545141388D80D006D4F8B /* AEDescUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDescUtils.m; sourceTree = "<group>"; };
+		CE4545321388DC27006D4F8B /* buildproject.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.scpt; name = buildproject.scpt; path = Applescript/buildproject.scpt; sourceTree = "<group>"; };
+		CE61957313417EFB00330B54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CE61957413417F0200330B54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CE61957613417FAA00330B54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SettingsWindow.xib; sourceTree = "<group>"; };
+		CE61957713417FB000330B54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/SettingsWindow.xib; sourceTree = "<group>"; };
+		CE61957913417FF200330B54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE61957A13417FF600330B54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE61958D134182AC00330B54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/ReadMe.rtf; sourceTree = "<group>"; };
+		CE61958E134182B200330B54 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/ReadMe.rtf; sourceTree = "<group>"; };
+		CE7DBF90138E097300A0E4EB /* xcodebuild.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xcodebuild.plist; sourceTree = "<group>"; };
+		CE8265791326014B000A2884 /* QOXIBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOXIBTableView.h; sourceTree = "<group>"; };
+		CE82657A1326014B000A2884 /* QOXIBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOXIBTableView.m; sourceTree = "<group>"; };
+		CE861D7813152B8C00ADCCC8 /* icon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = icon.ico; path = Res/icon.ico; sourceTree = "<group>"; };
+		CE861D841315428D00ADCCC8 /* icon512.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon512.icns; path = Res/icon512.icns; sourceTree = "<group>"; };
+		CE861DDB131550CA00ADCCC8 /* QOSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOSettingsController.h; sourceTree = "<group>"; };
+		CE861DDC131550CA00ADCCC8 /* QOSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOSettingsController.m; sourceTree = "<group>"; };
+		CE861E621315A57A00ADCCC8 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
+		CE86B397133F437500935937 /* QOCompareStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOCompareStrings.h; sourceTree = "<group>"; };
+		CE86B398133F437500935937 /* QOCompareStrings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QOCompareStrings.mm; sourceTree = "<group>"; };
+		CE88F740130E234500D366CA /* QOSharedLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QOSharedLibrary.h; path = Lib/QOSharedLibrary.h; sourceTree = "<group>"; };
+		CE88F741130E234500D366CA /* QOSharedLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QOSharedLibrary.m; path = Lib/QOSharedLibrary.m; sourceTree = "<group>"; };
+		CE8CD67D13265F68008198F1 /* QOLocalizableStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStrings.h; sourceTree = "<group>"; };
+		CE8CD67E13265F68008198F1 /* QOLocalizableStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableStrings.m; sourceTree = "<group>"; };
+		CE8CD68013265F92008198F1 /* QOLocalizableXIBStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableXIBStrings.h; sourceTree = "<group>"; };
+		CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableXIBStrings.m; sourceTree = "<group>"; };
+		CE8CD68313266785008198F1 /* QOPlistProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOPlistProcessing.h; sourceTree = "<group>"; };
+		CE8CD68413266785008198F1 /* QOPlistProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOPlistProcessing.m; sourceTree = "<group>"; };
+		CE8FB90F1389343700FC49F4 /* QOxcodeprojOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOxcodeprojOutlineView.h; sourceTree = "<group>"; };
+		CE8FB9101389343700FC49F4 /* QOxcodeprojOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOxcodeprojOutlineView.m; sourceTree = "<group>"; };
+		CE961875138F857B0089C324 /* QOColoredSyntaxTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOColoredSyntaxTextView.h; sourceTree = "<group>"; };
+		CE961876138F857B0089C324 /* QOColoredSyntaxTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOColoredSyntaxTextView.m; sourceTree = "<group>"; };
+		CE96187B138F86730089C324 /* NSArray+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Color.h"; sourceTree = "<group>"; };
+		CE96187C138F86730089C324 /* NSArray+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Color.m"; sourceTree = "<group>"; };
+		CE96187E138F869D0089C324 /* NSScanner+SkipUpToCharset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+SkipUpToCharset.h"; sourceTree = "<group>"; };
+		CE96187F138F869D0089C324 /* NSScanner+SkipUpToCharset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+SkipUpToCharset.m"; sourceTree = "<group>"; };
+		CEA633F113080696000F5CE3 /* QOLocalizableStringsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStringsController.h; sourceTree = "<group>"; };
+		CEA633F213080696000F5CE3 /* QOLocalizableStringsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QOLocalizableStringsController.mm; sourceTree = "<group>"; };
+		CEA6342213080CDB000F5CE3 /* Automator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Automator.framework; path = System/Library/Frameworks/Automator.framework; sourceTree = SDKROOT; };
+		CEB314131321F19D00E751E7 /* QOTranslateStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOTranslateStrings.h; sourceTree = "<group>"; };
+		CEB314141321F19D00E751E7 /* QOTranslateStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOTranslateStrings.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				CEA6342313080CDB000F5CE3 /* Automator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE4545031388BF84006D4F8B /* ProjectTree */,
+				CE05AF91138782E1003233C9 /* Scripts */,
+				7F39FF8E1330C1B800CE89EE /* Archiv */,
+				CE88F73F130E232F00D366CA /* Lib */,
+				256AC3D80F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m */,
+				CEA633F113080696000F5CE3 /* QOLocalizableStringsController.h */,
+				CEA633F213080696000F5CE3 /* QOLocalizableStringsController.mm */,
+				CE28B76413465166007AC551 /* QOLocalizableStringsTableView.h */,
+				CE28B76513465166007AC551 /* QOLocalizableStringsTableView.m */,
+				CE861DDB131550CA00ADCCC8 /* QOSettingsController.h */,
+				CE861DDC131550CA00ADCCC8 /* QOSettingsController.m */,
+				CE61954613417A2F00330B54 /* SettingsWindow.xib */,
+				7F39FF8B1330BE8100CE89EE /* QOStringsTableView.h */,
+				7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */,
+				CE8265791326014B000A2884 /* QOXIBTableView.h */,
+				CE82657A1326014B000A2884 /* QOXIBTableView.m */,
+				7F5D1767132E7754008BF0A8 /* QOSummaryTableView.h */,
+				7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */,
+				CE8CD67D13265F68008198F1 /* QOLocalizableStrings.h */,
+				CE8CD67E13265F68008198F1 /* QOLocalizableStrings.m */,
+				CE8CD68013265F92008198F1 /* QOLocalizableXIBStrings.h */,
+				CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */,
+				7F5D16DA132E5CB4008BF0A8 /* QOSummaryStrings.h */,
+				7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				CEA6342213080CDB000F5CE3 /* Automator.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* QOLocalizableStrings.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GenStringResources */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = GenStringResources;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3F00F4B6AF500CF3369 /* QOLocalizableStrings_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F8DC3138FC10D0086E170 /* Syntax Definitions */,
+				CE0F8DB6138FC07C0086E170 /* SyntaxColorDefaults.plist */,
+				CE0F8DB7138FC07C0086E170 /* SyntaxDefinition.plist */,
+				8D1107310486CEB800E47090 /* QOLocalizableStrings-Info.plist */,
+				CE61956413417D9F00330B54 /* xib */,
+				CE61956313417D8B00330B54 /* str */,
+				CE861D841315428D00ADCCC8 /* icon512.icns */,
+				CE861D7813152B8C00ADCCC8 /* icon.ico */,
+				CE61959D134183C400330B54 /* Settings */,
+				CE61958B1341829300330B54 /* ReadMe.rtf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F39FF8E1330C1B800CE89EE /* Archiv */ = {
+			isa = PBXGroup;
+			children = (
+				7F3D47771331FAFE00A2D1E2 /* QOLocalizableStringsTextView.h */,
+				7F3D47781331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m */,
+				7F3D47791331FAFE00A2D1E2 /* QOLocalizableXIBTextView.h */,
+				7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */,
+			);
+			name = Archiv;
+			sourceTree = "<group>";
+		};
+		CE05AF91138782E1003233C9 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				CE4545321388DC27006D4F8B /* buildproject.scpt */,
+				CE05AFA013878387003233C9 /* buildproject.applescript */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		CE0F8DC3138FC10D0086E170 /* Syntax Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				CE0F8DC4138FC10D0086E170 /* CSS 1.plist */,
+				CE0F8DC5138FC10D0086E170 /* HTML (Old).plist */,
+				CE0F8DC6138FC10D0086E170 /* HTML.plist */,
+				CE0F8DC7138FC10D0086E170 /* Objective C (Old).plist */,
+				CE0F8DC8138FC10D0086E170 /* Objective C.plist */,
+			);
+			includeInIndex = 0;
+			path = "Syntax Definitions";
+			sourceTree = "<group>";
+		};
+		CE4545031388BF84006D4F8B /* ProjectTree */ = {
+			isa = PBXGroup;
+			children = (
+				CE96187E138F869D0089C324 /* NSScanner+SkipUpToCharset.h */,
+				CE96187F138F869D0089C324 /* NSScanner+SkipUpToCharset.m */,
+				CE96187B138F86730089C324 /* NSArray+Color.h */,
+				CE96187C138F86730089C324 /* NSArray+Color.m */,
+				CE961875138F857B0089C324 /* QOColoredSyntaxTextView.h */,
+				CE961876138F857B0089C324 /* QOColoredSyntaxTextView.m */,
+				CE4545131388D80D006D4F8B /* AEDescUtils.h */,
+				CE4545141388D80D006D4F8B /* AEDescUtils.m */,
+				CE4544B213880DB4006D4F8B /* TCallScript.h */,
+				CE4544B313880DB4006D4F8B /* TCallScript.m */,
+				CE4545041388C239006D4F8B /* QOModuleStrings.h */,
+				CE4545051388C239006D4F8B /* QOModuleStrings.m */,
+				CE4544EE13884E66006D4F8B /* QOProjectTreeViewController.h */,
+				CE4544EF13884E66006D4F8B /* QOProjectTreeViewController.m */,
+				CE4544EA13884866006D4F8B /* ProjectTreeViewController.xib */,
+				CE8FB90F1389343700FC49F4 /* QOxcodeprojOutlineView.h */,
+				CE8FB9101389343700FC49F4 /* QOxcodeprojOutlineView.m */,
+				7F640071167B201C004B5645 /* CopyingModulesWindowController.h */,
+				7F640072167B201C004B5645 /* CopyingModulesWindowController.m */,
+				7F640074167B32CE004B5645 /* CopyingModulesWindowController.xib */,
+			);
+			name = ProjectTree;
+			sourceTree = "<group>";
+		};
+		CE61956313417D8B00330B54 /* str */ = {
+			isa = PBXGroup;
+			children = (
+				089C165CFE840E0CC02AAC07 /* Localizable.strings */,
+			);
+			name = str;
+			sourceTree = "<group>";
+		};
+		CE61956413417D9F00330B54 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
+		CE61959D134183C400330B54 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7F9795231316A716007442FD /* Projects.plist */,
+				CE861E621315A57A00ADCCC8 /* Properties.plist */,
+				CE7DBF90138E097300A0E4EB /* xcodebuild.plist */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		CE88F73F130E232F00D366CA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CE88F740130E234500D366CA /* QOSharedLibrary.h */,
+				CE88F741130E234500D366CA /* QOSharedLibrary.m */,
+				CE8CD68313266785008198F1 /* QOPlistProcessing.h */,
+				CE8CD68413266785008198F1 /* QOPlistProcessing.m */,
+				CEB314131321F19D00E751E7 /* QOTranslateStrings.h */,
+				CEB314141321F19D00E751E7 /* QOTranslateStrings.m */,
+				CE86B397133F437500935937 /* QOCompareStrings.h */,
+				CE86B398133F437500935937 /* QOCompareStrings.mm */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* QOLocalizableStrings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QOLocalizableStrings" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QOLocalizableStrings;
+			productInstallPath = "$(HOME)/Applications";
+			productName = GenStringResources;
+			productReference = 8D1107320486CEB800E47090 /* QOLocalizableStrings.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QOLocalizableStrings" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Russian,
+				en,
+				ru,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GenStringResources */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* QOLocalizableStrings */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* Localizable.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				CE861D7913152B8C00ADCCC8 /* icon.ico in Resources */,
+				CE861D851315428D00ADCCC8 /* icon512.icns in Resources */,
+				CE61954713417A2F00330B54 /* SettingsWindow.xib in Resources */,
+				CE861E631315A57A00ADCCC8 /* Properties.plist in Resources */,
+				7F9795241316A716007442FD /* Projects.plist in Resources */,
+				CE61958C1341829300330B54 /* ReadMe.rtf in Resources */,
+				CE4544EC13884866006D4F8B /* ProjectTreeViewController.xib in Resources */,
+				CE7DBF91138E097300A0E4EB /* xcodebuild.plist in Resources */,
+				CE0F8DB8138FC07C0086E170 /* SyntaxColorDefaults.plist in Resources */,
+				CE0F8DB9138FC07C0086E170 /* SyntaxDefinition.plist in Resources */,
+				CE0F8DC9138FC10D0086E170 /* CSS 1.plist in Resources */,
+				CE0F8DCA138FC10D0086E170 /* HTML (Old).plist in Resources */,
+				CE0F8DCB138FC10D0086E170 /* HTML.plist in Resources */,
+				CE0F8DCC138FC10D0086E170 /* Objective C (Old).plist in Resources */,
+				CE0F8DCD138FC10D0086E170 /* Objective C.plist in Resources */,
+				7FB20BAC16790EC000E88AC8 /* buildproject.scpt in Resources */,
+				7F640076167B32CE004B5645 /* CopyingModulesWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m in Sources */,
+				CEA633F313080696000F5CE3 /* QOLocalizableStringsController.mm in Sources */,
+				CE88F742130E234500D366CA /* QOSharedLibrary.m in Sources */,
+				CE861DDD131550CA00ADCCC8 /* QOSettingsController.m in Sources */,
+				CEB314151321F19D00E751E7 /* QOTranslateStrings.m in Sources */,
+				CE82657B1326014B000A2884 /* QOXIBTableView.m in Sources */,
+				CE8CD67F13265F68008198F1 /* QOLocalizableStrings.m in Sources */,
+				CE8CD68213265F92008198F1 /* QOLocalizableXIBStrings.m in Sources */,
+				CE8CD68513266785008198F1 /* QOPlistProcessing.m in Sources */,
+				7F5D16DC132E5CB4008BF0A8 /* QOSummaryStrings.m in Sources */,
+				7F5D1769132E7754008BF0A8 /* QOSummaryTableView.m in Sources */,
+				7F39FF8D1330BE8100CE89EE /* QOStringsTableView.m in Sources */,
+				7F3D477B1331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m in Sources */,
+				7F3D477C1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m in Sources */,
+				CE86B399133F437500935937 /* QOCompareStrings.mm in Sources */,
+				CE28B76613465166007AC551 /* QOLocalizableStringsTableView.m in Sources */,
+				CE4544B413880DB4006D4F8B /* TCallScript.m in Sources */,
+				CE4544F013884E66006D4F8B /* QOProjectTreeViewController.m in Sources */,
+				CE4545061388C239006D4F8B /* QOModuleStrings.m in Sources */,
+				CE4545151388D80D006D4F8B /* AEDescUtils.m in Sources */,
+				CE8FB9111389343700FC49F4 /* QOxcodeprojOutlineView.m in Sources */,
+				CE961877138F857B0089C324 /* QOColoredSyntaxTextView.m in Sources */,
+				CE96187D138F86730089C324 /* NSArray+Color.m in Sources */,
+				CE961880138F869D0089C324 /* NSScanner+SkipUpToCharset.m in Sources */,
+				7F640073167B201C004B5645 /* CopyingModulesWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE61957913417FF200330B54 /* en */,
+				CE61957A13417FF600330B54 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE61957313417EFB00330B54 /* en */,
+				CE61957413417F0200330B54 /* ru */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		7F640074167B32CE004B5645 /* CopyingModulesWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F640075167B32CE004B5645 /* en */,
+				7F640077167B32E9004B5645 /* ru */,
+			);
+			name = CopyingModulesWindowController.xib;
+			sourceTree = "<group>";
+		};
+		CE4544EA13884866006D4F8B /* ProjectTreeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE4544EB13884866006D4F8B /* en */,
+			);
+			name = ProjectTreeViewController.xib;
+			sourceTree = "<group>";
+		};
+		CE61954613417A2F00330B54 /* SettingsWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE61957613417FAA00330B54 /* en */,
+				CE61957713417FB000330B54 /* ru */,
+			);
+			name = SettingsWindow.xib;
+			sourceTree = "<group>";
+		};
+		CE61958B1341829300330B54 /* ReadMe.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE61958D134182AC00330B54 /* en */,
+				CE61958E134182B200330B54 /* ru */,
+			);
+			name = ReadMe.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QOLocalizableStrings_Prefix.pch;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "QOLocalizableStrings-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = QOLocalizableStrings;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QOLocalizableStrings_Prefix.pch;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "QOLocalizableStrings-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = QOLocalizableStrings;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QOLocalizableStrings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QOLocalizableStrings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0302DF16-30ED-4246-9B3E-697034F3E98A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GenStringResources</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CFA08A6B7E10AD3B5F7A341FEEA41E080805C50E</key>
+		<string>https://github.com/SKrotkih/GenStringResources.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GenStringResources.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CFA08A6B7E10AD3B5F7A341FEEA41E080805C50E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SKrotkih/GenStringResources.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CFA08A6B7E10AD3B5F7A341FEEA41E080805C50E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CFA08A6B7E10AD3B5F7A341FEEA41E080805C50E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GenStringResources</string>
+		</dict>
+	</array>
+</dict>
+</plist>

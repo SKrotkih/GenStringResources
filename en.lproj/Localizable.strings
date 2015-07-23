@@ -12,7 +12,7 @@
 "Apply data (save translated data)" = "Apply data (save translated data)";
 
 /* Can't execute command. Return code is %d */
-"Can't execute command. Return code is %d" = "Can't execute command. Return code is %d";
+"Couldn't execute the command. Return code is %d" = "Couldn't execute the command. Return code is %d";
 
 /* Comment */
 "Comment" = "Comment";
@@ -21,110 +21,107 @@
 "Continue" = "Continue";
 
 /* Data didn't found. */
-"Data didn't found." = "Data didn't found.";
+"Couldn't find data" = "Couldn't find data";
 
 /* Data didn't save */
-"Data didn't save" = "Data didn't save";
+"Couldn't save data" = "Couldn't save data";
 
 /* Data didn't save! */
-"Data didn't save!" = "Data didn't save!";
+"Couldn't save data!" = "Couldn't save data!";
 
 /* Data didn't save! May be list for save is empty. */
-"Data didn't save! May be list for save is empty." = "Data didn't save! May be list for save is empty.";
+"Couldn't save data! Please check list for saving data." = "Couldn't save data! Please check list for saving data.";
 
 /* Data saved successfully */
-"Data saved successfully" = "Data saved successfully";
+"Data were saved successfully" = "Data were saved successfully";
 
 /* Data saved to the directory '%@' */
-"Data saved to the directory '%@'" = "Data saved to the directory '%@'";
+"Data were saved to the directory '%@'" = "Data were saved to the directory '%@'";
 
 /* Data were applyed. */
 "Data were applyed." = "Data were applyed.";
 
 /* Directory '%@' doesn't exist! */
-"Directory '%@' doesn't exist!" = "Directory '%@' doesn't exist!";
+"Directory '%@' not found!" = "Directory '%@' not found!";
 
 /* English string */
 /* English string column name */
-"English string" = "English string";
+"String in English" = "String in English";
 
 /* Error */
 "Error" = "Error";
 
 /* File '%@' isn't exist! */
-"File '%@' isn't exist!" = "File '%@' isn't exist!";
+"File '%@' not found!" = "File '%@' not found!";
 
-/* Load strings from a file of the localizable.strings type */
-"Load strings from a file of the localizable.strings type" = "Load strings from a file of the localizable.strings type";
+/* Load string from a file of the localizable.strings type */
+"Load string resources from the localizable.strings file" = "Load string resources from the localizable.strings file";
 
-/* Load strings from a file of the plist type */
-"Load strings from a file of the plist type" = "Load strings from a file of the plist type";
+/* Load string from a file of the plist type */
+"Load string resources from the plist file" = "Load string resources from the plist file";
 
 /* Merge strings from a file of the localizable.strings format */
-"Merge strings from a file of the localizable.strings format" = "Merge strings from a file of the localizable.strings format";
+"Merge string resources from the localizable.strings file" = "Merge string resources from the localizable.strings file";
 
 /* New localizable.strings saved to the project */
-"New localizable.strings saved to the project" = "New localizable.strings saved to the project";
+"The new localizable.strings file was saved" = "The new localizable.strings file was saved";
 
 /* New strings saved to the project '%@' */
-"New strings saved to the project '%@'" = "New strings saved to the project '%@'";
+"New string resources were saved to the '%@' project" = "New string resources were saved to the '%@' project";
 
 /* No issues */
 "No issues" = "No issues";
 
 /* Open Succeeded */
-"Open Succeeded" = "Open Succeeded";
+"Scan data has finished successfully" = "Scan data has finished successfully";
 
 /* Please check settings about directory path to the projects. */
-"Please check settings about directory path to the projects." = "Please check settings about directory path to the projects.";
+"Wrong directory path to the project in the settings. Please check data." = "Wrong directory path to the project in the settings. Please check data.";
 
 /* Please start to scan XIBs. */
-"Please start to scan XIBs." = "Please start to scan XIBs.";
+"Please start the process of the XIBs scanning" = "Please start the process of the XIBs scanning";
 
 /* Project */
 "Project" = "Project";
 
 /* Reload data from temporary file */
-"Reload data from temporary file" = "Reload data from temporary file";
-
-/* Reload data from the temporary file */
-"Reload data from the temporary file" = "Reload data from the temporary file";
+"Start reloading data from the temporary file" = "Start reloading data from the temporary file";
 
 /* Save */
-"Save" = "Save";
+"Save data" = "Save data";
 
 /* Save as file of the ibtool format type */
-"Save as file of the ibtool format type" = "Save as file of the ibtool format type";
+"Save data to the file as ibtool type" = "Save data to the file as ibtool type";
 
 /* Save as file of the localizable.strings type */
-"Save as file of the localizable.strings type" = "Save as file of the localizable.strings type";
+"Save data to file as localizable.strings type" = "Save data to file as localizable.strings type";
 
 /* Save as file of the property list (plist) type */
-"Save as file of the property list (plist) type" = "Save as file of the property list (plist) type";
+"Save data to file as property list (plist) type" = "Save data to file as property list (plist) type";
 
 /* Save as... */
-"Save as..." = "Save as...";
+"Save data to file as ... type" = "Save data to file as ... type";
 
 /* Save data to the temporary file */
-"Save data to the temporary file" = "Save data to the temporary file";
+"Save data to temporary file" = "Save data to temporary file";
 
 /* Scan Succeeded */
-"Scan Succeeded" = "Scan Succeeded";
+"Scan data has finished successfully" = "Scan data has finished successfully";
 
 /* Search similar strings */
-"Search similar strings" = "Search similar strings";
+"Start looking for the similar strings" = "Start looking for the similar strings";
 
 /* Select NEW tab and choise 'Reload data' from context menu */
-"Select NEW tab and choise 'Reload data' from context menu" = "Select NEW tab and choise 'Reload data' from context menu";
+"Select NEW tab and choise 'Reload data' in context menu" = "Select NEW tab and choise 'Reload data' in context menu";
 
 /* Settings data changed, but didn't save.\nWould you like save the changes? */
-"Settings data changed, but didn't save.\nWould you like save the changes?" = "Settings data changed, but didn't save.\nWould you like save the changes?";
+"Settings data was changed, but didn't save.\nWould you like to save changes?" = "Settings data was changed, but didn't save.\nWould you like to save changes?";
 
 /* The data lists for import to the XIBs are empty! */
-"The data lists for import to the XIBs are empty!" = "The data lists for import to the XIBs are empty!";
+"The list data for importing to the XIBs is empty!" = "The list data for importing to the XIBs is empty!";
 
 /* Translate Succeeded */
-"Translate Succeeded" = "Translate Succeeded";
+"The operation of translation of the string resources has finished successfully" = "The operation of translation of the string resources has finished successfully";
 
 /* Translate it! */
 "Translate it!" = "Translate it!";
@@ -136,10 +133,10 @@
 "Warning!" = "Warning!";
 
 /* Work directory changed, but didn't save.\nWould you like save the change? */
-"Work directory changed, but didn't save.\nWould you like save the change?" = "Work directory changed, but didn't save.\nWould you like save the change?";
+"Work directory path was changed, but didn't save.\nWould you like to save the changes?" = "Work directory path was changed, but didn't save.\nWould you like to save the changes?";
 
 /* You may move to the 'no translate' of tab Strings or XIBs and apply 'Reload data'. */
-"You may move to the 'no translate' of tab Strings or XIBs and apply 'Reload data'." = "You may move to the 'no translate' of tab Strings or XIBs and apply 'Reload data'.";
+"You may move string or XIBs to the 'no translate' position and then start 'Reload data'." = "You may move string or XIBs to the 'no translate' position and then start 'Reload data'.";
 
 /* No comment provided by engineer. */
 "name" = "name";

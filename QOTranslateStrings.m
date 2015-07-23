@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOTranslateStrings.m
 //

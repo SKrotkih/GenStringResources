@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m */; };
+		256AC3DA0F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m */; };
 		7F39FF8D1330BE8100CE89EE /* QOStringsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */; };
-		7F3D477B1331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D47781331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m */; };
+		7F3D477B1331FAFE00A2D1E2 /* GenStringResourcesTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D47781331FAFE00A2D1E2 /* GenStringResourcesTextView.m */; };
 		7F3D477C1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */; };
 		7F5D16DC132E5CB4008BF0A8 /* QOSummaryStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */; };
 		7F5D1769132E7754008BF0A8 /* QOSummaryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */; };
+		7F5D8C771B611F3A000C3C54 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D8C761B611F3A000C3C54 /* README.md */; };
 		7F640073167B201C004B5645 /* CopyingModulesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F640072167B201C004B5645 /* CopyingModulesWindowController.m */; };
 		7F640076167B32CE004B5645 /* CopyingModulesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F640074167B32CE004B5645 /* CopyingModulesWindowController.xib */; };
 		7F9795241316A716007442FD /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F9795231316A716007442FD /* Projects.plist */; };
@@ -28,7 +29,7 @@
 		CE0F8DCB138FC10D0086E170 /* HTML.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC6138FC10D0086E170 /* HTML.plist */; };
 		CE0F8DCC138FC10D0086E170 /* Objective C (Old).plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC7138FC10D0086E170 /* Objective C (Old).plist */; };
 		CE0F8DCD138FC10D0086E170 /* Objective C.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0F8DC8138FC10D0086E170 /* Objective C.plist */; };
-		CE28B76613465166007AC551 /* QOLocalizableStringsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE28B76513465166007AC551 /* QOLocalizableStringsTableView.m */; };
+		CE28B76613465166007AC551 /* GenStringResourcesTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE28B76513465166007AC551 /* GenStringResourcesTableView.m */; };
 		CE4544B413880DB4006D4F8B /* TCallScript.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4544B313880DB4006D4F8B /* TCallScript.m */; };
 		CE4544EC13884866006D4F8B /* ProjectTreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4544EA13884866006D4F8B /* ProjectTreeViewController.xib */; };
 		CE4544F013884E66006D4F8B /* QOProjectTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4544EF13884E66006D4F8B /* QOProjectTreeViewController.m */; };
@@ -44,14 +45,14 @@
 		CE861E631315A57A00ADCCC8 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE861E621315A57A00ADCCC8 /* Properties.plist */; };
 		CE86B399133F437500935937 /* QOCompareStrings.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE86B398133F437500935937 /* QOCompareStrings.mm */; };
 		CE88F742130E234500D366CA /* QOSharedLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE88F741130E234500D366CA /* QOSharedLibrary.m */; };
-		CE8CD67F13265F68008198F1 /* QOLocalizableStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD67E13265F68008198F1 /* QOLocalizableStrings.m */; };
+		CE8CD67F13265F68008198F1 /* GenStringResources.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD67E13265F68008198F1 /* GenStringResources.m */; };
 		CE8CD68213265F92008198F1 /* QOLocalizableXIBStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */; };
 		CE8CD68513266785008198F1 /* QOPlistProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8CD68413266785008198F1 /* QOPlistProcessing.m */; };
 		CE8FB9111389343700FC49F4 /* QOxcodeprojOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8FB9101389343700FC49F4 /* QOxcodeprojOutlineView.m */; };
 		CE961877138F857B0089C324 /* QOColoredSyntaxTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE961876138F857B0089C324 /* QOColoredSyntaxTextView.m */; };
 		CE96187D138F86730089C324 /* NSArray+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CE96187C138F86730089C324 /* NSArray+Color.m */; };
 		CE961880138F869D0089C324 /* NSScanner+SkipUpToCharset.m in Sources */ = {isa = PBXBuildFile; fileRef = CE96187F138F869D0089C324 /* NSScanner+SkipUpToCharset.m */; };
-		CEA633F313080696000F5CE3 /* QOLocalizableStringsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA633F213080696000F5CE3 /* QOLocalizableStringsController.mm */; };
+		CEA633F313080696000F5CE3 /* GenStringResourcesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA633F213080696000F5CE3 /* GenStringResourcesController.mm */; };
 		CEA6342313080CDB000F5CE3 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA6342213080CDB000F5CE3 /* Automator.framework */; };
 		CEB314151321F19D00E751E7 /* QOTranslateStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB314141321F19D00E751E7 /* QOTranslateStrings.m */; };
 /* End PBXBuildFile section */
@@ -59,29 +60,30 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		256AC3D80F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStringsAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableStringsAppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* QOLocalizableStrings_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStrings_Prefix.pch; sourceTree = "<group>"; };
+		256AC3D80F4B6AC300CF3369 /* GenStringResourcesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenStringResourcesAppDelegate.h; sourceTree = "<group>"; };
+		256AC3D90F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenStringResourcesAppDelegate.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* GenStringResources_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenStringResources_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		7F39FF8B1330BE8100CE89EE /* QOStringsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOStringsTableView.h; sourceTree = "<group>"; };
 		7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOStringsTableView.m; sourceTree = "<group>"; };
-		7F3D47771331FAFE00A2D1E2 /* QOLocalizableStringsTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QOLocalizableStringsTextView.h; path = Arch/QOLocalizableStringsTextView.h; sourceTree = "<group>"; };
-		7F3D47781331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QOLocalizableStringsTextView.m; path = Arch/QOLocalizableStringsTextView.m; sourceTree = "<group>"; };
+		7F3D47771331FAFE00A2D1E2 /* GenStringResourcesTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenStringResourcesTextView.h; path = Arch/GenStringResourcesTextView.h; sourceTree = "<group>"; };
+		7F3D47781331FAFE00A2D1E2 /* GenStringResourcesTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenStringResourcesTextView.m; path = Arch/GenStringResourcesTextView.m; sourceTree = "<group>"; };
 		7F3D47791331FAFE00A2D1E2 /* QOLocalizableXIBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QOLocalizableXIBTextView.h; path = Arch/QOLocalizableXIBTextView.h; sourceTree = "<group>"; };
 		7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QOLocalizableXIBTextView.m; path = Arch/QOLocalizableXIBTextView.m; sourceTree = "<group>"; };
 		7F5D16DA132E5CB4008BF0A8 /* QOSummaryStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOSummaryStrings.h; sourceTree = "<group>"; };
 		7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOSummaryStrings.m; sourceTree = "<group>"; };
 		7F5D1767132E7754008BF0A8 /* QOSummaryTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOSummaryTableView.h; sourceTree = "<group>"; };
 		7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOSummaryTableView.m; sourceTree = "<group>"; };
+		7F5D8C761B611F3A000C3C54 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7F640071167B201C004B5645 /* CopyingModulesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyingModulesWindowController.h; sourceTree = "<group>"; };
 		7F640072167B201C004B5645 /* CopyingModulesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyingModulesWindowController.m; sourceTree = "<group>"; };
 		7F640075167B32CE004B5645 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CopyingModulesWindowController.xib; sourceTree = "<group>"; };
 		7F640077167B32E9004B5645 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/CopyingModulesWindowController.xib; sourceTree = "<group>"; };
 		7F9795231316A716007442FD /* Projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Projects.plist; path = Res/Projects.plist; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* QOLocalizableStrings-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QOLocalizableStrings-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* QOLocalizableStrings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QOLocalizableStrings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107310486CEB800E47090 /* GenStringResources-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenStringResources-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* GenStringResources.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenStringResources.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE05AFA013878387003233C9 /* buildproject.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = buildproject.applescript; path = Applescript/buildproject.applescript; sourceTree = "<group>"; };
 		CE0F8DB6138FC07C0086E170 /* SyntaxColorDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SyntaxColorDefaults.plist; sourceTree = "<group>"; };
 		CE0F8DB7138FC07C0086E170 /* SyntaxDefinition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SyntaxDefinition.plist; sourceTree = "<group>"; };
@@ -90,8 +92,8 @@
 		CE0F8DC6138FC10D0086E170 /* HTML.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HTML.plist; sourceTree = "<group>"; };
 		CE0F8DC7138FC10D0086E170 /* Objective C (Old).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Objective C (Old).plist"; sourceTree = "<group>"; };
 		CE0F8DC8138FC10D0086E170 /* Objective C.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Objective C.plist"; sourceTree = "<group>"; };
-		CE28B76413465166007AC551 /* QOLocalizableStringsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStringsTableView.h; sourceTree = "<group>"; };
-		CE28B76513465166007AC551 /* QOLocalizableStringsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableStringsTableView.m; sourceTree = "<group>"; };
+		CE28B76413465166007AC551 /* GenStringResourcesTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenStringResourcesTableView.h; sourceTree = "<group>"; };
+		CE28B76513465166007AC551 /* GenStringResourcesTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenStringResourcesTableView.m; sourceTree = "<group>"; };
 		CE4544B213880DB4006D4F8B /* TCallScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCallScript.h; sourceTree = "<group>"; };
 		CE4544B313880DB4006D4F8B /* TCallScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCallScript.m; sourceTree = "<group>"; };
 		CE4544EB13884866006D4F8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ProjectTreeViewController.xib; sourceTree = "<group>"; };
@@ -122,8 +124,8 @@
 		CE86B398133F437500935937 /* QOCompareStrings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QOCompareStrings.mm; sourceTree = "<group>"; };
 		CE88F740130E234500D366CA /* QOSharedLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QOSharedLibrary.h; path = Lib/QOSharedLibrary.h; sourceTree = "<group>"; };
 		CE88F741130E234500D366CA /* QOSharedLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QOSharedLibrary.m; path = Lib/QOSharedLibrary.m; sourceTree = "<group>"; };
-		CE8CD67D13265F68008198F1 /* QOLocalizableStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStrings.h; sourceTree = "<group>"; };
-		CE8CD67E13265F68008198F1 /* QOLocalizableStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableStrings.m; sourceTree = "<group>"; };
+		CE8CD67D13265F68008198F1 /* GenStringResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenStringResources.h; sourceTree = "<group>"; };
+		CE8CD67E13265F68008198F1 /* GenStringResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenStringResources.m; sourceTree = "<group>"; };
 		CE8CD68013265F92008198F1 /* QOLocalizableXIBStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableXIBStrings.h; sourceTree = "<group>"; };
 		CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOLocalizableXIBStrings.m; sourceTree = "<group>"; };
 		CE8CD68313266785008198F1 /* QOPlistProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOPlistProcessing.h; sourceTree = "<group>"; };
@@ -136,8 +138,8 @@
 		CE96187C138F86730089C324 /* NSArray+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Color.m"; sourceTree = "<group>"; };
 		CE96187E138F869D0089C324 /* NSScanner+SkipUpToCharset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+SkipUpToCharset.h"; sourceTree = "<group>"; };
 		CE96187F138F869D0089C324 /* NSScanner+SkipUpToCharset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+SkipUpToCharset.m"; sourceTree = "<group>"; };
-		CEA633F113080696000F5CE3 /* QOLocalizableStringsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOLocalizableStringsController.h; sourceTree = "<group>"; };
-		CEA633F213080696000F5CE3 /* QOLocalizableStringsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QOLocalizableStringsController.mm; sourceTree = "<group>"; };
+		CEA633F113080696000F5CE3 /* GenStringResourcesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenStringResourcesController.h; sourceTree = "<group>"; };
+		CEA633F213080696000F5CE3 /* GenStringResourcesController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GenStringResourcesController.mm; sourceTree = "<group>"; };
 		CEA6342213080CDB000F5CE3 /* Automator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Automator.framework; path = System/Library/Frameworks/Automator.framework; sourceTree = SDKROOT; };
 		CEB314131321F19D00E751E7 /* QOTranslateStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QOTranslateStrings.h; sourceTree = "<group>"; };
 		CEB314141321F19D00E751E7 /* QOTranslateStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QOTranslateStrings.m; sourceTree = "<group>"; };
@@ -163,12 +165,12 @@
 				CE05AF91138782E1003233C9 /* Scripts */,
 				7F39FF8E1330C1B800CE89EE /* Archiv */,
 				CE88F73F130E232F00D366CA /* Lib */,
-				256AC3D80F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m */,
-				CEA633F113080696000F5CE3 /* QOLocalizableStringsController.h */,
-				CEA633F213080696000F5CE3 /* QOLocalizableStringsController.mm */,
-				CE28B76413465166007AC551 /* QOLocalizableStringsTableView.h */,
-				CE28B76513465166007AC551 /* QOLocalizableStringsTableView.m */,
+				256AC3D80F4B6AC300CF3369 /* GenStringResourcesAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m */,
+				CEA633F113080696000F5CE3 /* GenStringResourcesController.h */,
+				CEA633F213080696000F5CE3 /* GenStringResourcesController.mm */,
+				CE28B76413465166007AC551 /* GenStringResourcesTableView.h */,
+				CE28B76513465166007AC551 /* GenStringResourcesTableView.m */,
 				CE861DDB131550CA00ADCCC8 /* QOSettingsController.h */,
 				CE861DDC131550CA00ADCCC8 /* QOSettingsController.m */,
 				CE61954613417A2F00330B54 /* SettingsWindow.xib */,
@@ -178,8 +180,8 @@
 				CE82657A1326014B000A2884 /* QOXIBTableView.m */,
 				7F5D1767132E7754008BF0A8 /* QOSummaryTableView.h */,
 				7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */,
-				CE8CD67D13265F68008198F1 /* QOLocalizableStrings.h */,
-				CE8CD67E13265F68008198F1 /* QOLocalizableStrings.m */,
+				CE8CD67D13265F68008198F1 /* GenStringResources.h */,
+				CE8CD67E13265F68008198F1 /* GenStringResources.m */,
 				CE8CD68013265F92008198F1 /* QOLocalizableXIBStrings.h */,
 				CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */,
 				7F5D16DA132E5CB4008BF0A8 /* QOSummaryStrings.h */,
@@ -210,7 +212,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* QOLocalizableStrings.app */,
+				8D1107320486CEB800E47090 /* GenStringResources.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,7 +232,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3F00F4B6AF500CF3369 /* QOLocalizableStrings_Prefix.pch */,
+				256AC3F00F4B6AF500CF3369 /* GenStringResources_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -242,12 +244,13 @@
 				CE0F8DC3138FC10D0086E170 /* Syntax Definitions */,
 				CE0F8DB6138FC07C0086E170 /* SyntaxColorDefaults.plist */,
 				CE0F8DB7138FC07C0086E170 /* SyntaxDefinition.plist */,
-				8D1107310486CEB800E47090 /* QOLocalizableStrings-Info.plist */,
+				8D1107310486CEB800E47090 /* GenStringResources-Info.plist */,
 				CE61956413417D9F00330B54 /* xib */,
 				CE61956313417D8B00330B54 /* str */,
 				CE861D841315428D00ADCCC8 /* icon512.icns */,
 				CE861D7813152B8C00ADCCC8 /* icon.ico */,
 				CE61959D134183C400330B54 /* Settings */,
+				7F5D8C761B611F3A000C3C54 /* README.md */,
 				CE61958B1341829300330B54 /* ReadMe.rtf */,
 			);
 			name = Resources;
@@ -265,8 +268,8 @@
 		7F39FF8E1330C1B800CE89EE /* Archiv */ = {
 			isa = PBXGroup;
 			children = (
-				7F3D47771331FAFE00A2D1E2 /* QOLocalizableStringsTextView.h */,
-				7F3D47781331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m */,
+				7F3D47771331FAFE00A2D1E2 /* GenStringResourcesTextView.h */,
+				7F3D47781331FAFE00A2D1E2 /* GenStringResourcesTextView.m */,
 				7F3D47791331FAFE00A2D1E2 /* QOLocalizableXIBTextView.h */,
 				7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */,
 			);
@@ -366,9 +369,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* QOLocalizableStrings */ = {
+		8D1107260486CEB800E47090 /* GenStringResources */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QOLocalizableStrings" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GenStringResources" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -378,10 +381,10 @@
 			);
 			dependencies = (
 			);
-			name = QOLocalizableStrings;
+			name = GenStringResources;
 			productInstallPath = "$(HOME)/Applications";
 			productName = GenStringResources;
-			productReference = 8D1107320486CEB800E47090 /* QOLocalizableStrings.app */;
+			productReference = 8D1107320486CEB800E47090 /* GenStringResources.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -392,7 +395,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QOLocalizableStrings" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GenStringResources" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -409,7 +412,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* QOLocalizableStrings */,
+				8D1107260486CEB800E47090 /* GenStringResources */,
 			);
 		};
 /* End PBXProject section */
@@ -449,22 +452,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				256AC3DA0F4B6AC300CF3369 /* QOLocalizableStringsAppDelegate.m in Sources */,
-				CEA633F313080696000F5CE3 /* QOLocalizableStringsController.mm in Sources */,
+				256AC3DA0F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m in Sources */,
+				CEA633F313080696000F5CE3 /* GenStringResourcesController.mm in Sources */,
 				CE88F742130E234500D366CA /* QOSharedLibrary.m in Sources */,
 				CE861DDD131550CA00ADCCC8 /* QOSettingsController.m in Sources */,
 				CEB314151321F19D00E751E7 /* QOTranslateStrings.m in Sources */,
 				CE82657B1326014B000A2884 /* QOXIBTableView.m in Sources */,
-				CE8CD67F13265F68008198F1 /* QOLocalizableStrings.m in Sources */,
+				CE8CD67F13265F68008198F1 /* GenStringResources.m in Sources */,
 				CE8CD68213265F92008198F1 /* QOLocalizableXIBStrings.m in Sources */,
 				CE8CD68513266785008198F1 /* QOPlistProcessing.m in Sources */,
 				7F5D16DC132E5CB4008BF0A8 /* QOSummaryStrings.m in Sources */,
 				7F5D1769132E7754008BF0A8 /* QOSummaryTableView.m in Sources */,
 				7F39FF8D1330BE8100CE89EE /* QOStringsTableView.m in Sources */,
-				7F3D477B1331FAFE00A2D1E2 /* QOLocalizableStringsTextView.m in Sources */,
+				7F3D477B1331FAFE00A2D1E2 /* GenStringResourcesTextView.m in Sources */,
 				7F3D477C1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m in Sources */,
+				7F5D8C771B611F3A000C3C54 /* README.md in Sources */,
 				CE86B399133F437500935937 /* QOCompareStrings.mm in Sources */,
-				CE28B76613465166007AC551 /* QOLocalizableStringsTableView.m in Sources */,
+				CE28B76613465166007AC551 /* GenStringResourcesTableView.m in Sources */,
 				CE4544B413880DB4006D4F8B /* TCallScript.m in Sources */,
 				CE4544F013884E66006D4F8B /* QOProjectTreeViewController.m in Sources */,
 				CE4545061388C239006D4F8B /* QOModuleStrings.m in Sources */,
@@ -545,11 +549,11 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QOLocalizableStrings_Prefix.pch;
+				GCC_PREFIX_HEADER = GenStringResources_Prefix.pch;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "QOLocalizableStrings-Info.plist";
+				INFOPLIST_FILE = "GenStringResources-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = QOLocalizableStrings;
+				PRODUCT_NAME = GenStringResources;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -561,11 +565,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QOLocalizableStrings_Prefix.pch;
+				GCC_PREFIX_HEADER = GenStringResources_Prefix.pch;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "QOLocalizableStrings-Info.plist";
+				INFOPLIST_FILE = "GenStringResources-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = QOLocalizableStrings;
+				PRODUCT_NAME = GenStringResources;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -601,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "QOLocalizableStrings" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GenStringResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -610,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QOLocalizableStrings" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GenStringResources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

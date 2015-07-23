@@ -1,13 +1,13 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStrings.m
+//  GenStringResources.m
 //
 //  Created by Sergey Krotkih on 08.03.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
 //
 
-#import "QOLocalizableStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResources.h"
+#import "GenStringResourcesController.h"
 #import "QOSettingsController.h"
 #import "QOSharedLibrary.h"
 #import "QOStringsTableView.h"
@@ -18,7 +18,7 @@ static NSString* const STRINGS_TITLE = @"Strings";
 static NSString* const MODULES_TITLE = @"Modules";
 
 
-@interface QOLocalizableStrings ()
+@interface GenStringResources ()
 - (void) scanStringsThread;
 - (void) scanModulesThread;
 - (void) openStringsThread;
@@ -29,21 +29,21 @@ static NSString* const MODULES_TITLE = @"Modules";
 - (NSString*) rootWorkFolderForTabName: (NSString*) aTabName withClean: (BOOL) aClean;
 @end
 
-@implementation QOLocalizableStrings
+@implementation GenStringResources
 
 @synthesize appController, scanQueue;
 
-+ (QOLocalizableStrings* ) sharedLocalizableStrings
++ (GenStringResources* ) sharedLocalizableStrings
 {
-	static QOLocalizableStrings*  _sharedLocalizableStrings = nil;
+	static GenStringResources*  _sharedLocalizableStrings = nil;
 	
 	if (_sharedLocalizableStrings == nil)
 	{
-		_sharedLocalizableStrings = [[QOLocalizableStrings alloc] init];
+		_sharedLocalizableStrings = [[GenStringResources alloc] init];
         _sharedLocalizableStrings.scanQueue = [[NSOperationQueue alloc] init];
         _sharedLocalizableStrings.scanQueue.name = @"ScanOfLocalizableStrings";
         _sharedLocalizableStrings.scanQueue.MaxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
-        _sharedLocalizableStrings.appController = [QOLocalizableStringsController appController];
+        _sharedLocalizableStrings.appController = [GenStringResourcesController appController];
 	}
 	
 	return _sharedLocalizableStrings;
@@ -82,7 +82,7 @@ static NSString* const MODULES_TITLE = @"Modules";
     if (result != 0)
     {
         NSBeginAlertSheet(NSLocalizedString(@"Error", @"Error"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                          NSLocalizedString(@"Can't execute command. Return code is %d", @"Can't execute command. Return code is %d"), result);
+                          NSLocalizedString(@"Couldn't execute the command. Return code is %d", @"Couldn't execute the command. Return code is %d"), result);
     }
 }
 
@@ -209,7 +209,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
                           @selector(alertDidEnd:returnCode:contextInfo:),
                           nil,
                           @"Error in settings",
-                          NSLocalizedString(@"Please check settings about directory path to the projects.", @"Please check settings about directory path to the projects."));
+                          NSLocalizedString(@"Wrong directory path to the project in the settings. Please check data.", @"Wrong directory path to the project in the settings. Please check data."));
         [appController enableToolbar: YES];
         [pool release];
         
@@ -346,7 +346,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     [appController.progressBar stopAnimation: self];
     [appController enableToolbar: YES];
     
-    NSBeginAlertSheet(NSLocalizedString(@"Scan Succeeded", @"Scan Succeeded"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                       NSLocalizedString(@"No issues", @"No issues"));
     
     [plistProjects release];
@@ -367,7 +367,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
                           @selector(alertDidEnd:returnCode:contextInfo:),
                           nil,
                           @"Error in settings",
-                          NSLocalizedString(@"Please check settings about directory path to the projects.", @"Please check settings about directory path to the projects."));
+                          NSLocalizedString(@"Wrong directory path to the project in the settings. Please check data.", @"Wrong directory path to the project in the settings. Please check data."));
         [appController enableToolbar: YES];
         [pool release];
         
@@ -651,7 +651,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController.progressBar stopAnimation: self];
     [appController enableToolbar: YES];
-    NSBeginAlertSheet(NSLocalizedString(@"Scan Succeeded", @"Scan Succeeded"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                       NSLocalizedString(@"No issues", @"No issues"));
     
     [plistProjects release];
@@ -674,7 +674,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
                           @selector(alertDidEnd:returnCode:contextInfo:),
                           nil,
                           @"Error in settings",
-                          NSLocalizedString(@"Please check settings about directory path to the projects.", @"Please check settings about directory path to the projects."));
+                          NSLocalizedString(@"Wrong directory path to the project in the settings. Please check data.", @"Wrong directory path to the project in the settings. Please check data."));
         return value;
     }
     NSEnumerator* projectsPListEnumerator = [plistProjects objectEnumerator];
@@ -704,7 +704,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     if (![[NSFileManager defaultManager] fileExistsAtPath: workDir])
     {
         [appController enableToolbar: YES];
-        NSBeginAlertSheet(NSLocalizedString(@"Data didn't found.", @"Data didn't found."), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+        NSBeginAlertSheet(NSLocalizedString(@"Couldn't find data", @"Couldn't find data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                           NSLocalizedString(@"Please start to scan strings.", @"Please start to scan strings."));
         [pool release];
         return;
@@ -839,7 +839,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController enableToolbar: YES];
     [appController.progressBar stopAnimation: self];
-    NSBeginAlertSheet(NSLocalizedString(@"Open Succeeded", @"Open Succeeded"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                       NSLocalizedString(@"No issues", @"No issues"));
     [pool release];
 }
@@ -855,7 +855,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     if (![[NSFileManager defaultManager] fileExistsAtPath: workDir])
     {
         [appController enableToolbar: YES];
-        NSBeginAlertSheet(NSLocalizedString(@"Data didn't found.", @"Data didn't found."), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+        NSBeginAlertSheet(NSLocalizedString(@"Couldn't find data", @"Couldn't find data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                           NSLocalizedString(@"Please start to scan strings.", @"Please start to scan strings."));
         [pool release];
         
@@ -1055,7 +1055,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController enableToolbar: YES];
     [appController.progressBar stopAnimation: self];
-    NSBeginAlertSheet(NSLocalizedString(@"Open Succeeded", @"Open Succeeded"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                       NSLocalizedString(@"No issues", @"No issues"));
     [pool release];
 }
@@ -1105,7 +1105,7 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     if ([[NSFileManager defaultManager] fileExistsAtPath: workDir] == NO)
     {
         [appController enableToolbar: YES];
-        NSBeginAlertSheet(NSLocalizedString(@"Data didn't found.", @"Data didn't found."), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+        NSBeginAlertSheet(NSLocalizedString(@"Couldn't find data", @"Couldn't find data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
                           NSLocalizedString(@"Please start to scan strings.", @"Please start to scan strings."));
         return;
     }

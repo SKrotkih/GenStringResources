@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOStringsTableView.h
 //
@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "QOLocalizableStringsTableView.h"
+#import "GenStringResourcesTableView.h"
 
 typedef enum  
 {
@@ -17,7 +17,7 @@ typedef enum
     TYPE_DATA_NO_TRANSLATION
 } TYPE_FILE;
 
-@interface QOStringsTableView : QOLocalizableStringsTableView
+@interface QOStringsTableView : GenStringResourcesTableView
 {
     TYPE_FILE typeFile;
     NSMenu* contextMenu;

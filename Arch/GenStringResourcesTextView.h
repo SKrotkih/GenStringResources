@@ -1,6 +1,6 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsTextView.h
+//  GenStringResourcesTextView.h
 //
 //  Created by Sergey Krotkih on 23.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
@@ -17,11 +17,11 @@ typedef enum
 } TYPE_FILE;
 
 
-@class QOLocalizableStringsController;
+@class GenStringResourcesController;
 
-@interface QOLocalizableStringsTextView : NSScrollView  <NSTextViewDelegate>
+@interface GenStringResourcesTextView : NSScrollView  <NSTextViewDelegate>
 {
-    QOLocalizableStringsController* appController;
+    GenStringResourcesController* appController;
     NSTextView* textView;    
     NSString* projectName;
     TYPE_FILE typeFile;
@@ -37,6 +37,6 @@ typedef enum
 @property(readwrite, nonatomic, copy) NSString* targetLanguage;
 @property(readwrite, nonatomic, copy) NSString* projectName;
 
--(QOLocalizableStringsTextView*) initWithFile: (NSString*)aFileName encoding: (NSStringEncoding)enc;
+-(GenStringResourcesTextView*) initWithFile: (NSString*)aFileName encoding: (NSStringEncoding)enc;
 
 @end

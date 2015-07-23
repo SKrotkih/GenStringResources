@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOLocalizableXIBTextView.h
 //
@@ -16,11 +16,11 @@ typedef enum
     TYPE_DATA_NO_TRANSLATION
 } TYPE_FILE;
 
-@class QOLocalizableStringsController;
+@class GenStringResourcesController;
 
 @interface QOLocalizableXIBTextView : NSScrollView  <NSTextViewDelegate>
 {
-    QOLocalizableStringsController* appController;
+    GenStringResourcesController* appController;
     NSTextView* textView;    
     
     NSString* projectName;
@@ -31,7 +31,7 @@ typedef enum
     NSThread* thread;
 }
 
-@property(readwrite, nonatomic, assign) QOLocalizableStringsController* appController;
+@property(readwrite, nonatomic, assign) GenStringResourcesController* appController;
 @property(readwrite, nonatomic, assign) TYPE_FILE typeFile;
 @property(readwrite, nonatomic, copy) NSString* sourceFile;
 @property(readwrite, nonatomic, copy) NSString* targetFile;

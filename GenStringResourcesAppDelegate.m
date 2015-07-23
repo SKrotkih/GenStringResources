@@ -1,14 +1,14 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsAppDelegate.m
+//  GenStringResourcesAppDelegate.m
 //
 //  Created by Sergey Krotkih on 13.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
 //
 
-#import "QOLocalizableStringsAppDelegate.h"
+#import "GenStringResourcesAppDelegate.h"
 
-@implementation QOLocalizableStringsAppDelegate
+@implementation GenStringResourcesAppDelegate
 
 @synthesize window;
 

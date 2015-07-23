@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOCompareStrings.mm
 //

@@ -1,13 +1,13 @@
 //
 //  QOProjectTreeViewController.m
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  Created by Sergey Krotkih on 21.05.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
 //
 
 #import "QOProjectTreeViewController.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 #import "QOModuleStrings.h"
 #import "QOSharedLibrary.h"
 #import "QOStringsTableView.h"
@@ -31,7 +31,7 @@
 
 - (void)awakeFromNib
 {
-    appController = [QOLocalizableStringsController appController];
+    appController = [GenStringResourcesController appController];
     treeOutlineView.delegate = self;
     treeOutlineView.parentViewController = self;
     projectTree = [[NSMutableArray alloc] init];
@@ -75,7 +75,7 @@
     int result = system(cString);    
     if (result != 0) 
     {
-        NSLog(@"Can't execute command. Return code is %d", result);
+        NSLog(@"Couldn't execute the command. Return code is %d", result);
     }
     if ([[NSFileManager defaultManager] fileExistsAtPath: resultFileName] == YES) 
     {

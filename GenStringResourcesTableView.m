@@ -1,18 +1,18 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsTableView.m
+//  GenStringResourcesTableView.m
 //
 //  Created by Sergey Krotkih on 23.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
 //
 
-#import "QOLocalizableStringsTableView.h"
+#import "GenStringResourcesTableView.h"
 #import "QOSharedLibrary.h"
 #import "QOTranslateStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 #import "QOCompareStrings.h"
 
-@implementation QOLocalizableStringsTableView
+@implementation GenStringResourcesTableView
 
 @synthesize appController;
 @synthesize sourceFile;
@@ -24,7 +24,7 @@
 {
     if ((self = [super init]))
     {
-        appController = [QOLocalizableStringsController appController];
+        appController = [GenStringResourcesController appController];
         [self setHasVerticalScroller: YES];
         [self setHasHorizontalScroller: YES];
         [self setAutohidesScrollers: YES];
@@ -79,7 +79,7 @@
             [tableView setTarget: self];
             
             NSTableColumn* theColumn = [[[NSTableColumn alloc] initWithIdentifier: @"key"] autorelease];
-            [theColumn.headerCell setStringValue: NSLocalizedString(@"English string",  @"English string column name")]; 
+            [theColumn.headerCell setStringValue: NSLocalizedString(@"String in English",  @"English string column name")]; 
             [theColumn setSortDescriptorPrototype: [[[NSSortDescriptor alloc] initWithKey: @"key" 
                                                                                 ascending: YES] autorelease]];
             [theColumn setWidth: 150];
@@ -299,11 +299,11 @@
     NSString* text = @"";
     [QOSharedLibrary saveDictionary: records toText: &text];    
     [QOSharedLibrary saveLocalizableStrings: targetFile content: text];
-    NSBeginAlertSheet(NSLocalizedString(@"Data saved successfully", @"Data saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                      NSLocalizedString(@"New localizable.strings saved to the project", @"New localizable.strings saved to the project"));
+    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                      NSLocalizedString(@"The new localizable.strings file was saved", @"The new localizable.strings file was saved"));
 }
 
-#pragma mark Load strings from file
+#pragma mark Load string from file
 
 -(void) loadStringsFromPlistFile: (NSString*) fileName
 {
@@ -336,7 +336,7 @@
     else 
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"File '%@' isn't exist!", @"File '%@' isn't exist!"), fileName);
+                          NSLocalizedString(@"File '%@' not found!", @"File '%@' not found!"), fileName);
     }
 }
 
@@ -361,7 +361,7 @@
     else 
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"File '%@' isn't exist!", @"File '%@' isn't exist!"), fileName);
+                          NSLocalizedString(@"File '%@' not found!", @"File '%@' not found!"), fileName);
     }
 }
 
@@ -372,7 +372,7 @@
                                            forObj: self]; 
 }
 
-#pragma mark Reload strings from temporary file
+#pragma mark ReLoad string from temporary file
 
 -(void) reloadData: (id) sender
 {
@@ -393,7 +393,7 @@
     else 
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"File '%@' isn't exist!", @"File '%@' isn't exist!"), sourceFile);
+                          NSLocalizedString(@"File '%@' not found!", @"File '%@' not found!"), sourceFile);
     }
 }
 
@@ -416,7 +416,7 @@
                     toDictionary: &records];
     [tableView reloadData];
     
-    NSBeginAlertSheet(NSLocalizedString(@"Translate Succeeded", @"Translate Succeeded"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+    NSBeginAlertSheet(NSLocalizedString(@"The operation of translation of the string resources has finished successfully", @"The operation of translation of the string resources has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
                       NSLocalizedString(@"No issues", @"No issues"));
     [appController.progressBar stopAnimation: appController];
     [pool release];

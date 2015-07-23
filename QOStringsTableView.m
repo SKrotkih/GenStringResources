@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOStringsTableView.m
 //
@@ -9,7 +9,7 @@
 #import "QOStringsTableView.h"
 #import "QOSharedLibrary.h"
 #import "QOTranslateStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 #import "QOCompareStrings.h"
 
 @implementation QOStringsTableView
@@ -23,7 +23,7 @@
                         projectName: aProjectName
                                 lng: aLng]))
     {
-        appController = [QOLocalizableStringsController appController];
+        appController = [GenStringResourcesController appController];
     }
 
     return self;
@@ -46,13 +46,13 @@
     if ([QOSharedLibrary mergeTranslatedStringsToFileName: newStringsFileName 
                                                      data: text] == YES)
     {
-        NSBeginAlertSheet(NSLocalizedString(@"Data saved successfully", @"Data saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"Select NEW tab and choise 'Reload data' from context menu", @"Select NEW tab and choise 'Reload data' from context menu"));
+        NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                          NSLocalizedString(@"Select NEW tab and choise 'Reload data' in context menu", @"Select NEW tab and choise 'Reload data' in context menu"));
     }
     else 
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"Data didn't save!", @"Data didn't save!"));
+                          NSLocalizedString(@"Couldn't save data!", @"Couldn't save data!"));
     }
 }
 
@@ -64,20 +64,20 @@
     
     contextMenu = [[NSMenu alloc] initWithTitle :@"LocalizableStrings"];
     
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to the temporary file", @"Save data to the temporary file") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to temporary file", @"Save data to temporary file") 
                                                       action: @selector(save:) 
                                                keyEquivalent: @""] autorelease]];        
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Reload data from temporary file", @"Reload data from temporary file") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Start reloading data from the temporary file", @"Start reloading data from the temporary file") 
                                                       action: @selector(reloadData:) 
                                                keyEquivalent: @""] autorelease]];                
     [contextMenu addItem: [NSMenuItem separatorItem]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as file of the localizable.strings type", @"Save as file of the localizable.strings type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to file as localizable.strings type", @"Save data to file as localizable.strings type") 
                                                       action: @selector(saveAsLocalizableStrings:) 
                                                keyEquivalent: @""] autorelease]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as file of the property list (plist) type", @"Save as file of the property list (plist) type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to file as property list (plist) type", @"Save data to file as property list (plist) type") 
                                                       action: @selector(saveAsPlist:) 
                                                keyEquivalent: @""] autorelease]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as...", @"Save as...") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to file as ... type", @"Save data to file as ... type") 
                                                       action: @selector(saveAs:) 
                                                keyEquivalent: @""] autorelease]];            
     if (typeFile == TYPE_DATA_NO_TRANSLATION)
@@ -90,13 +90,13 @@
                                                           action: @selector(saveTranslationData:) 
                                                    keyEquivalent: @""] autorelease]];
         [contextMenu addItem: [NSMenuItem separatorItem]];
-        [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load strings from a file of the plist type", @"Load strings from a file of the plist type") 
+        [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load string resources from the plist file", @"Load string resources from the plist file") 
                                                           action: @selector(loadStringsFromPlist:) 
                                                    keyEquivalent: @""] autorelease]];        
-        [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load strings from a file of the localizable.strings type", @"Load strings from a file of the localizable.strings type") 
+        [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load string resources from the localizable.strings file", @"Load string resources from the localizable.strings file") 
                                                           action: @selector(loadStringsFromLocalizableStrings:) 
                                                    keyEquivalent: @""] autorelease]];        
-        [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Merge strings from a file of the localizable.strings format", @"Merge strings from a file of the localizable.strings format") 
+        [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Merge string resources from the localizable.strings file", @"Merge string resources from the localizable.strings file") 
                                                           action: @selector(mergeStrings:) 
                                                    keyEquivalent: @""] autorelease]];        
     }
@@ -109,7 +109,7 @@
     }
 
     [contextMenu addItem: [NSMenuItem separatorItem]];
-    checkSimilarMenuItem = [[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Search similar strings", @"Search similar strings") 
+    checkSimilarMenuItem = [[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Start looking for the similar strings", @"Start looking for the similar strings") 
                                                       action: @selector(searchSimilarStrings:) 
                                                keyEquivalent: @""];
     [contextMenu addItem: checkSimilarMenuItem];

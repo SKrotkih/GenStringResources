@@ -1,35 +1,35 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsController.mm
+//  GenStringResourcesController.mm
 //
 //  Created by Sergey Krotkih on 13.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
 //
 
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 #include <stdio.h>
 #import <Foundation/Foundation.h>
 #import "QOSettingsController.h"
-#import "QOLocalizableStrings.h"
+#import "GenStringResources.h"
 #import "QOXIBTableView.h"
 #import "QOLocalizableXIBStrings.h"
 #import "QOSummaryStrings.h"
 #import "QOProjectTreeViewController.h"
 
-@implementation QOLocalizableStringsController
+@implementation GenStringResourcesController
 
 @synthesize progressBar;
 @synthesize window = mainWindow;
 @synthesize tabView;
 
-static QOLocalizableStringsController* _appController = nil;
+static GenStringResourcesController* _appController = nil;
 
-+ (QOLocalizableStringsController*) appController
++ (GenStringResourcesController*) appController
 {
 	return _appController;
 }
 
-- (QOLocalizableStringsController*)init
+- (GenStringResourcesController*)init
 {
 	if ((self = [super init]))
 	{	
@@ -129,25 +129,25 @@ static QOLocalizableStringsController* _appController = nil;
 
 - (IBAction) startScanLocalizableStrings: (id) sender
 {
-    QOLocalizableStrings* localizableStrings = [QOLocalizableStrings sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
     [localizableStrings startScanStrings];
 }
 
 - (IBAction) open: (id) sender
 {
-    QOLocalizableStrings* localizableStrings = [QOLocalizableStrings sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
     [localizableStrings openProject];
 }
 
 - (IBAction) startScanProjectModules: (id) sender
 {
-    QOLocalizableStrings* localizableStrings = [QOLocalizableStrings sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
     [localizableStrings startScanModules];
 }
 
 - (IBAction) openProjectModules: (id) sender
 {
-    QOLocalizableStrings* localizableStrings = [QOLocalizableStrings sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
     [localizableStrings openProjectModules];
 }
 

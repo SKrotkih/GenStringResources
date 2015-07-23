@@ -16,13 +16,13 @@
 		<key>name</key>
 		<string>Quickfiles</string>
 		<key>ResourcesPath</key>
-		<string>/Users/oldman/Development/IOS_ML_DEV/Quickfiles/IPH_QOF_App/res</string>
+		<string>/Volumes/Macintosh HD/Development/IOS_QS/Quickfiles/IPH_QOF_App/res</string>
 		<key>RootPath</key>
-		<string>/Users/oldman/Development/IOS_ML_DEV/Quickfiles/IPH_QOF_App</string>
+		<string>/Volumes/Macintosh HD/Development/IOS_QS/Quickfiles/IPH_QOF_App</string>
 		<key>RoutineLocalizedString</key>
 		<string>QFLocalizedString</string>
 		<key>XIBsPath</key>
-		<string>/Users/oldman/Development/IOS_ML_DEV/Quickfiles/IPH_QOF_App/ipd/res/xib</string>
+		<string>/Volumes/Macintosh HD/Development/IOS_QS/Quickfiles/IPH_QOF_App/ipd/res/xib</string>
 	</dict>
 	<dict>
 		<key>enable</key>

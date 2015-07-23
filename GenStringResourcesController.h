@@ -1,6 +1,6 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsController.h
+//  GenStringResourcesController.h
 //
 //  Created by Sergey Krotkih on 13.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface QOLocalizableStringsController : NSObject
+@interface GenStringResourcesController : NSObject
 {
     IBOutlet NSProgressIndicator* progressBar;
     IBOutlet NSTabView* tabView;
@@ -16,7 +16,7 @@
     BOOL isEnableToolBar;
 }
 
-+ (QOLocalizableStringsController*) appController;
++ (GenStringResourcesController*) appController;
 
 - (void) enableToolbar: (BOOL)enable;
 - (IBAction) settings: (id) sender;

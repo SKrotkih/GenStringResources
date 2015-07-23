@@ -1,6 +1,6 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsTableView.h
+//  GenStringResourcesTableView.h
 //
 //  Created by Sergey Krotkih on 23.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
@@ -8,9 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class QOLocalizableStringsController;
+@class GenStringResourcesController;
 
-@interface QOLocalizableStringsTableView : NSScrollView  <NSTableViewDelegate, NSTableViewDataSource>
+@interface GenStringResourcesTableView : NSScrollView  <NSTableViewDelegate, NSTableViewDataSource>
 {
     NSTableView* tableView;
     NSMutableArray* records;
@@ -19,7 +19,7 @@
     NSMenuItem* checkSimilarMenuItem;
     BOOL isShowSimilarStrings;
     
-    QOLocalizableStringsController* appController;
+    GenStringResourcesController* appController;
     NSString* projectName;
     NSString* targetLanguage;
     NSString* sourceFile;
@@ -30,7 +30,7 @@
 
 @property(nonatomic, assign) NSTableView* tableView;
 @property(nonatomic, retain) NSArray* records;
-@property(readwrite, nonatomic, assign) QOLocalizableStringsController* appController;
+@property(readwrite, nonatomic, assign) GenStringResourcesController* appController;
 @property(readwrite, nonatomic, copy) NSString* sourceFile;
 @property(readwrite, nonatomic, copy) NSString* targetFile;
 

@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOSettingsController.m
 //
@@ -145,7 +145,7 @@
     if ([arrayContent isEqualToArray: [NSArray arrayWithContentsOfFile: plistPath]] == NO)
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), 
-                          NSLocalizedString(@"Save", @"Save"), 
+                          NSLocalizedString(@"Save data", @"Save data"), 
                           NSLocalizedString(@"Continue", @"Continue"), 
                           nil,
                           [self window], 
@@ -153,13 +153,13 @@
                           @selector(alertDidEnd:returnCode:contextInfo:),
                           nil,
                           @"SettingsProjects", 
-                          NSLocalizedString(@"Settings data changed, but didn't save.\nWould you like save the changes?", @"Settings data changed, but didn't save.\nWould you like save the changes?"));
+                          NSLocalizedString(@"Settings data was changed, but didn't save.\nWould you like to save changes?", @"Settings data was changed, but didn't save.\nWould you like to save changes?"));
         return NO;
     }
     else if ([[resultDirTextField stringValue] isEqualToString: [propertiesList objectForKey: @"ResultDir"]] == NO)
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), 
-                          NSLocalizedString(@"Save", @"Save"), 
+                          NSLocalizedString(@"Save data", @"Save data"), 
                           NSLocalizedString(@"Continue", @"Continue"),  
                           nil,
                           [self window], 
@@ -167,7 +167,7 @@
                           @selector(alertDidEnd:returnCode:contextInfo:),
                           nil,
                           @"WorkDirectory",
-                          NSLocalizedString(@"Work directory changed, but didn't save.\nWould you like save the change?", @"Work directory changed, but didn't save.\nWould you like save the change?"));
+                          NSLocalizedString(@"Work directory path was changed, but didn't save.\nWould you like to save the changes?", @"Work directory path was changed, but didn't save.\nWould you like to save the changes?"));
         return NO;
     }
     return YES;

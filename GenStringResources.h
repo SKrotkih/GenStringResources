@@ -1,6 +1,6 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStrings.h
+//  GenStringResources.h
 //
 //  Created by Sergey Krotkih on 08.03.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
@@ -8,20 +8,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class QOLocalizableStringsController;
+@class GenStringResourcesController;
 
-@interface QOLocalizableStrings : NSObject <NSApplicationDelegate>
+@interface GenStringResources : NSObject <NSApplicationDelegate>
 {
     NSOperationQueue* scanQueue;
-    QOLocalizableStringsController* appController;
+    GenStringResourcesController* appController;
     NSThread* thread;
     
 }
 
-@property(nonatomic, assign) QOLocalizableStringsController* appController;
+@property(nonatomic, assign) GenStringResourcesController* appController;
 @property(nonatomic, readwrite, assign) NSOperationQueue* scanQueue;
 
-+ (QOLocalizableStrings *) sharedLocalizableStrings;
++ (GenStringResources *) sharedLocalizableStrings;
 - (void) startScanStrings;
 - (void) startScanModules;
 - (void) openProject;

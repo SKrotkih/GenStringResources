@@ -1,17 +1,17 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
-//  QOLocalizableStringsTextView.m
+//  GenStringResourcesTextView.m
 //
 //  Created by Sergey Krotkih on 23.02.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
 //
 
-#import "QOLocalizableStringsTextView.h"
+#import "GenStringResourcesTextView.h"
 #import "QOSharedLibrary.h"
 #import "QOTranslateStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 
-@implementation QOLocalizableStringsTextView
+@implementation GenStringResourcesTextView
 
 @synthesize typeFile;
 @synthesize sourceFile;
@@ -19,7 +19,7 @@
 @synthesize targetLanguage;
 @synthesize projectName;
 
--(QOLocalizableStringsTextView*) initWithFile: (NSString*)aFileName encoding: (NSStringEncoding)enc
+-(GenStringResourcesTextView*) initWithFile: (NSString*)aFileName encoding: (NSStringEncoding)enc
 {
     if ((self = [super init]) != nil)
     {
@@ -49,7 +49,7 @@
         
         sourceFile = nil;
         targetFile = nil;
-        appController = [QOLocalizableStringsController appController];
+        appController = [GenStringResourcesController appController];
     }
     
     return self;
@@ -93,7 +93,7 @@
     else 
     {
         NSBeginAlertSheet(@"Warning!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"File '%@' isn't exist!", sourceFile);
+                          @"File '%@' not found!", sourceFile);
     }
 }
 
@@ -128,21 +128,21 @@
 
     if ([QOSharedLibrary mergeTranslatedStringsToFileName: newStringsFileName data: [textView string]] == YES)
     {
-        NSBeginAlertSheet(@"Data saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"Select NEW tab and choise 'Reload data' from context menu");
+        NSBeginAlertSheet(@"Data were saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                          @"Select NEW tab and choise 'Reload data' in context menu");
     }
     else 
     {
         NSBeginAlertSheet(@"Warning!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"Data didn't save!");
+                          @"Couldn't save data!");
     }
 }
 
 -(void) saveLocalizableStrings :(id) sender
 {
     [QOSharedLibrary saveLocalizableStrings: targetFile content: [textView string]];
-    NSBeginAlertSheet(@"Data saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                      @"New localizable.strings saved to the project");
+    NSBeginAlertSheet(@"Data were saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                      @"The new localizable.strings file was saved");
 }
 
 -(void) translateItThread
@@ -154,7 +154,7 @@
                                                                   targetLanguage: targetLanguage];
     [translateResourcesController release];
     [textView setString: result];
-    NSBeginAlertSheet(@"Translate Succeeded", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+    NSBeginAlertSheet(@"The operation of translation of the string resources has finished successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
                       @"No issues");
     [appController.progressBar stopAnimation: appController];
     [pool release];
@@ -198,11 +198,11 @@
                          action: @selector(startScanStringResourcesForCurrentProject:) 
                   keyEquivalent: @"startscan"] setTarget:self];        
     }
-    [[menu addItemWithTitle: @"Save" 
+    [[menu addItemWithTitle: @"Save data" 
                      action: @selector(save:) 
-              keyEquivalent: @"save"] setTarget:self];
+              keyEquivalent: @"Save data"] setTarget:self];
 
-    [[menu addItemWithTitle: @"Save as..." 
+    [[menu addItemWithTitle: @"Save data to file as ... type" 
                      action: @selector(saveAs:) 
               keyEquivalent: @"saveas"] setTarget:self];        
 

@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOXIBTableView.m
 //
@@ -9,7 +9,7 @@
 #import "QOXIBTableView.h"
 #import "QOSharedLibrary.h"
 #import "QOTranslateStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 
 @implementation QOXIBTableView
 
@@ -22,7 +22,7 @@
                         projectName: aProjectName
                                 lng: aLng]))
     {
-        appController = [QOLocalizableStringsController appController];
+        appController = [GenStringResourcesController appController];
     }
     
     return self;
@@ -79,14 +79,14 @@
         if (result != 0) 
         {
             NSBeginAlertSheet(NSLocalizedString(@"Error", @"Error"), nil, nil, nil, aParentWindow, nil, nil, nil, nil, 
-                              NSLocalizedString(@"Can't execute command. Return code is %d", @"Can't execute command. Return code is %d"), result);
+                              NSLocalizedString(@"Couldn't execute the command. Return code is %d", @"Couldn't execute the command. Return code is %d"), result);
             return NO;
         }
     }
     else 
     {
         NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"Data didn't save! May be list for save is empty.", @"Data didn't save! May be list for save is empty."));
+                          NSLocalizedString(@"Couldn't save data! Please check list for saving data.", @"Couldn't save data! Please check list for saving data."));
         return NO;
     }
     return YES;
@@ -188,8 +188,8 @@
                                  toXibFile: oldXibFileName 
                               parentWindow: MAINWINDOW] == YES)
                 {
-                    NSBeginAlertSheet(NSLocalizedString(@"Data saved successfully", @"Data saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                                      [NSString stringWithFormat: NSLocalizedString(@"New strings saved to the project '%@'", @"New strings saved to the project '%@'"), projectName]);
+                    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                                      [NSString stringWithFormat: NSLocalizedString(@"New string resources were saved to the '%@' project", @"New string resources were saved to the '%@' project"), projectName]);
                 }
             }
             else 
@@ -198,16 +198,16 @@
                             toXibFile: oldXibFileName
                           toDirectory: directoryName] == YES)
                 {
-                    NSBeginAlertSheet(NSLocalizedString(@"Data saved successfully", @"Data saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                                      [NSString stringWithFormat: NSLocalizedString(@"Data saved to the directory '%@'", @"Data saved to the directory '%@'"), directoryName]);
+                    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                                      [NSString stringWithFormat: NSLocalizedString(@"Data were saved to the directory '%@'", @"Data were saved to the directory '%@'"), directoryName]);
                 }
             }
         }
     }
     else 
     {
-        NSBeginAlertSheet(NSLocalizedString(@"Data didn't save!", @"Data didn't save"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"The data lists for import to the XIBs are empty!", @"The data lists for import to the XIBs are empty!"));
+        NSBeginAlertSheet(NSLocalizedString(@"Couldn't save data!", @"Couldn't save data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                          NSLocalizedString(@"The list data for importing to the XIBs is empty!", @"The list data for importing to the XIBs is empty!"));
     }
     [array release];
 }
@@ -249,8 +249,8 @@
     [QOSharedLibrary createDirectory: directoryName];
     if ([[NSFileManager defaultManager] fileExistsAtPath: directoryName] == NO) 
     {
-        NSBeginAlertSheet(NSLocalizedString(@"Data didn't save!", @"Data didn't save!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          [NSString stringWithFormat: NSLocalizedString(@"Directory '%@' doesn't exist!", @"Directory '%@' doesn't exist!"), directoryName]);
+        NSBeginAlertSheet(NSLocalizedString(@"Couldn't save data!", @"Couldn't save data!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                          [NSString stringWithFormat: NSLocalizedString(@"Directory '%@' not found!", @"Directory '%@' not found!"), directoryName]);
         return;
     }
 
@@ -281,23 +281,23 @@
 {
     typeFile = aTypeFile;
     contextMenu = [[NSMenu alloc] initWithTitle :@"LocalizableXIBs"];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to the temporary file", @"Save data to the temporary file") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to temporary file", @"Save data to temporary file") 
                                                       action: @selector(save:) 
                                                keyEquivalent: @""] autorelease]];        
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Reload data from the temporary file", @"Reload data from the temporary file") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Start reloading data from the temporary file", @"Start reloading data from the temporary file") 
                                                       action: @selector(reloadData:) 
                                                keyEquivalent: @""] autorelease]];                
     [contextMenu addItem: [NSMenuItem separatorItem]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as file of the property list (plist) type", @"Save as file of the property list (plist) type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to file as property list (plist) type", @"Save data to file as property list (plist) type") 
                                                       action: @selector(saveAsPlist:) 
                                                keyEquivalent: @""] autorelease]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as file of the localizable.strings type", @"Save as file of the localizable.strings type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to file as localizable.strings type", @"Save data to file as localizable.strings type") 
                                                       action: @selector(saveAsLocalizableStrings:) 
                                                keyEquivalent: @""] autorelease]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as file of the ibtool format type", @"Save as file of the ibtool format type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to the file as ibtool type", @"Save data to the file as ibtool type") 
                                                       action: @selector(saveAsIbToolFormat:) 
                                                keyEquivalent: @""] autorelease]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save as...", @"Save as...") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Save data to file as ... type", @"Save data to file as ... type") 
                                                       action: @selector(saveAs:) 
                                                keyEquivalent: @""] autorelease]];            
 
@@ -313,18 +313,18 @@
     }
     
     [contextMenu addItem: [NSMenuItem separatorItem]];
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load strings from a file of the plist type", @"Load strings from a file of the plist type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load string resources from the plist file", @"Load string resources from the plist file") 
                                                       action: @selector(loadStringsFromPlist:) 
                                                keyEquivalent: @""] autorelease]];        
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load strings from a file of the localizable.strings type", @"Load strings from a file of the localizable.strings type") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Load string resources from the localizable.strings file", @"Load string resources from the localizable.strings file") 
                                                       action: @selector(loadStringsFromLocalizableStrings:) 
                                                keyEquivalent: @""] autorelease]];        
-    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Merge strings from a file of the localizable.strings format", @"Merge strings from a file of the localizable.strings format") 
+    [contextMenu addItem: [[[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Merge string resources from the localizable.strings file", @"Merge string resources from the localizable.strings file") 
                                                       action: @selector(mergeStrings:) 
                                                keyEquivalent: @""] autorelease]];        
     
     [contextMenu addItem: [NSMenuItem separatorItem]];
-    checkSimilarMenuItem = [[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Search similar strings", @"Search similar strings") 
+    checkSimilarMenuItem = [[NSMenuItem alloc] initWithTitle: NSLocalizedString(@"Start looking for the similar strings", @"Start looking for the similar strings") 
                                                       action: @selector(searchSimilarStrings:) 
                                                keyEquivalent: @""];
     [contextMenu addItem: checkSimilarMenuItem];

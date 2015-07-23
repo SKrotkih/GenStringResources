@@ -1,6 +1,6 @@
 //
 //  QOModuleStrings.m
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  Created by Sergey Krotkih on 22.05.11.
 //  Copyright 2011 Quickoffice. All rights reserved.

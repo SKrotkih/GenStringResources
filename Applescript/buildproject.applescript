@@ -1,5 +1,5 @@
 -- buildproject.applescript
--- QOLocalizableStrings
+-- GenStringResources
 
 -- Created by Sergey Krotkih on 21.05.11.
 -- Copyright 2011 Quickoffice. All rights reserved.
@@ -25,8 +25,8 @@
 -- call method "writeDictionary:withName:" of class "CreatePackageAction" with parameters
 --      {descriptionRecord, descriptionFilePath}
 (*
-property p_projectPath : "Users:oldman:Development:GenStringResources:QOLocalizableStrings.xcodeproj"
-property p_target : "QOLocalizableStrings"
+property p_projectPath : "Users:oldman:Development:GenStringResources:GenStringResources.xcodeproj"
+property p_target : "GenStringResources"
 property p_resultCleanFileName : "Users:oldman:Documents:Temp:cleanresult.txt"
 property p_resultBuildFileName : "Users:oldman:Documents:Temp:buildresult.txt"
 property p_errorOfResultBuildFileName : "Users:oldman:Documents:Temp:errorbuildresult.txt"

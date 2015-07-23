@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOSummaryStrings.m
 //
@@ -7,7 +7,7 @@
 //
 
 #import "QOSummaryStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 #import "QOSummaryTableView.h"
 #import "QOPlistProcessing.h"
 #import "QOSettingsController.h"
@@ -29,7 +29,7 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
 	if (_sharedSummaryStrings == nil)
 	{
 		_sharedSummaryStrings = [[QOSummaryStrings alloc] init];
-        _sharedSummaryStrings.appController = [QOLocalizableStringsController appController];
+        _sharedSummaryStrings.appController = [GenStringResourcesController appController];
 	}
 	
 	return _sharedSummaryStrings;
@@ -101,7 +101,7 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
                           @selector(alertDidEnd:returnCode:contextInfo:),
                           nil,
                           @"Error in settings",
-                          NSLocalizedString(@"Please check settings about directory path to the projects.", @"Please check settings about directory path to the projects."));
+                          NSLocalizedString(@"Wrong directory path to the project in the settings. Please check data.", @"Wrong directory path to the project in the settings. Please check data."));
         [appController enableToolbar: YES];
         [pool release];
         
@@ -344,7 +344,7 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
     
     [appController.progressBar stopAnimation: self];
     [appController enableToolbar: YES];
-    NSBeginAlertSheet(NSLocalizedString(@"Scan Succeeded", @"Scan Succeeded"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
                       NSLocalizedString(@"No issues", @"No issues"));
     [plistProjects release];
     [tabViewMain release];

@@ -1,6 +1,6 @@
 //
 //  QOProjectTreeViewController.h
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  Created by Sergey Krotkih on 21.05.11.
 //  Copyright 2011 Quickoffice. All rights reserved.
@@ -10,11 +10,11 @@
 #import "QOxcodeprojOutlineView.h"
 #import "QOColoredSyntaxTextView.h"
 
-@class QOLocalizableStringsController;
+@class GenStringResourcesController;
 
 @interface QOProjectTreeViewController : NSViewController <NSOutlineViewDelegate, NSOutlineViewDataSource>
 {
-    QOLocalizableStringsController* appController;
+    GenStringResourcesController* appController;
     NSTabView* tabViewXcodeProject;
 	IBOutlet QOxcodeprojOutlineView* treeOutlineView;
 	IBOutlet QOColoredSyntaxTextView* textView;
@@ -27,7 +27,7 @@
     NSString* localizableStringsFileName;
 }
 
-@property (nonatomic, assign) QOLocalizableStringsController* appController;
+@property (nonatomic, assign) GenStringResourcesController* appController;
 @property (nonatomic, copy) NSString* pathOfProject;
 @property (nonatomic, copy) NSString* projectName;
 @property (nonatomic, copy) NSString* targetOfBuild;

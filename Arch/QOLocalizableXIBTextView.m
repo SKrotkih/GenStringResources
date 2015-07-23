@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOLocalizableXIBTextView.m
 //
@@ -9,7 +9,7 @@
 #import "QOLocalizableXIBTextView.h"
 #import "QOSharedLibrary.h"
 #import "QOTranslateStrings.h"
-#import "QOLocalizableStringsController.h"
+#import "GenStringResourcesController.h"
 
 @implementation QOLocalizableXIBTextView
 
@@ -48,7 +48,7 @@
         
         sourceFile = nil;
         targetFile = nil;
-        appController = [QOLocalizableStringsController appController];
+        appController = [GenStringResourcesController appController];
     }
     
     return self;
@@ -91,7 +91,7 @@
     else 
     {
         NSBeginAlertSheet(@"Warning!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"File '%@' isn't exist!", sourceFile);
+                          @"File '%@' not found!", sourceFile);
     }
 }
 
@@ -127,13 +127,13 @@
     if ([QOSharedLibrary mergeTranslatedStringsToFileName: newStringsFileName 
                                                      data: [textView string]] == YES)
     {
-        NSBeginAlertSheet(@"Data saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"Select NEW tab and choise 'Reload data' from context menu");
+        NSBeginAlertSheet(@"Data were saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+                          @"Select NEW tab and choise 'Reload data' in context menu");
     }
     else 
     {
         NSBeginAlertSheet(@"Warning!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"Data didn't save!");
+                          @"Couldn't save data!");
     }
 }
 
@@ -153,13 +153,13 @@
         if (result != 0) 
         {
             NSBeginAlertSheet(@"Error", nil, nil, nil, aParentWindow, nil, nil, nil, nil, 
-                              @"Can't execute command. Return code is %d", result);
+                              @"Couldn't execute the command. Return code is %d", result);
         }
     }
     else 
     {
         NSBeginAlertSheet(@"Warning!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          @"Data didn't save!");
+                          @"Couldn't save data!");
     }
 }
 
@@ -229,7 +229,7 @@
     }
     [array release];
     
-    NSBeginAlertSheet(@"Data saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+    NSBeginAlertSheet(@"Data were saved successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
                       @"New strings saved to the XIB files of the project");
     [appController.progressBar stopAnimation: appController];
     [pool release];
@@ -257,7 +257,7 @@
                                                                   targetLanguage: targetLanguage];
     [translateResourcesController release];
     [textView setString: result];
-    NSBeginAlertSheet(@"Translate Succeeded", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
+    NSBeginAlertSheet(@"The operation of translation of the string resources has finished successfully", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
                       @"No issues");
     [appController.progressBar stopAnimation: appController];
     [pool release];
@@ -300,11 +300,11 @@
                          action: @selector(startScanStringResourcesForCurrentProject:) 
                   keyEquivalent: @"startscan"] setTarget:self];        
     }
-    [[menu addItemWithTitle: @"Save" 
+    [[menu addItemWithTitle: @"Save data" 
                      action: @selector(save:) 
-              keyEquivalent: @"save"] setTarget:self];
+              keyEquivalent: @"Save data"] setTarget:self];
     
-    [[menu addItemWithTitle: @"Save as..." 
+    [[menu addItemWithTitle: @"Save data to file as ... type" 
                      action: @selector(saveAs:) 
               keyEquivalent: @"saveas"] setTarget:self];        
     

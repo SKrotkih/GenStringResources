@@ -1,4 +1,4 @@
-//  QOLocalizableStrings
+//  GenStringResources
 //
 //  QOLocalizableXIBStrings.h
 //
@@ -8,15 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class QOLocalizableStringsController;
+@class GenStringResourcesController;
 
 @interface QOLocalizableXIBStrings : NSObject 
 {
-    QOLocalizableStringsController* appController;
+    GenStringResourcesController* appController;
     NSThread* thread;
 }
 
-@property(nonatomic, assign) QOLocalizableStringsController* appController;
+@property(nonatomic, assign) GenStringResourcesController* appController;
 
 + (QOLocalizableXIBStrings *) sharedLocalizableXIBStrings;
 - (void) startScan;

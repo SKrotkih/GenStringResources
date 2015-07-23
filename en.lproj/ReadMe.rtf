@@ -27,21 +27,21 @@
 \cf0 	GenStringResources is a Mac OS application. It requirements MacOS at least 10.6.4 and above, Xcode 4.3 and above. The application uses ibtool and genstrings utilities from Xcode. \
     GenStringResources may be used for localization of the Xcode projects in Objective-C.\
     Application is divided on following parts:\
-    
+
 \f2 \uc0\u8259 
-\f1     scanner of the string resources from the Localizable.strings files;\
-    
+\f1  scanner of the string resources from the Localizable.strings files;\
+
 \f2 \uc0\u8259 
-\f1     scanner of the string resources from the XIB files;\
-    
+\f1  scanner of the string resources from the XIB files;\
+
 \f2 \uc0\u8259 
-\f1     of the string resources creator;\
-    
+\f1  of the string resources creator;\
+
 \f2 \uc0\u8259 
-\f1     presenting total information about all string resources for all languages for all projects;\
-    
+\f1  presenting total information about all string resources for all languages for all projects;\
+
 \f2 \uc0\u8259 
-\f1     setting up all options of the application.\
+\f1  setting up all options of the application.\
 	Scanner of the resources is passed all Localizable.strings by 
 \f0\b \CocoaLigature1 genstrings
 \f1\b0 \CocoaLigature0  utility. It passed by recursive  all folder with modules with the source code of a project. It generates Localizable.strings file with total string resources for the project.\
@@ -53,8 +53,8 @@ After translate, all new strings can be merged with current resources by the app
 \f1\b0 \CocoaLigature0  utility, builds the similar total file as the previous scanner, just for XIB strings resources.\
 	All operation are carried out in automatic mode for every active project. You can set up active mode for every project in settings. \
 	So, all string resources are unit in following total resources:\
-  - current dictionary. It contains all phrases with translate for all projects. \
-  - actual dictionary. In result of scanning that collected all resources for all projects. They are actual on now. Some phrases are translated (they present the current dictionary) and another part is waiting to translate.\
+- current dictionary. It contains all phrases with translate for all projects. \
+- actual dictionary. In result of scanning that collected all resources for all projects. They are actual on now. Some phrases are translated (they present the current dictionary) and another part is waiting to translate.\
 After translate, all new strings can be merged with actual resources and become as current. \
 \
 \
@@ -81,7 +81,7 @@ Then menu item for showing readme file and menu item for setup of the tools pane
 \cf0 	All data is kept in work directory. By default it is '~/Documents/LocalizableStrings'. \
 It can be changed in settings. The work directory is divided on three. They are: '/strings', '/XIBs', '/XcodeProjects'. \
 Every folder consists from project subdirectories by they name.\
-In result of scanning all string resources accumulate in the working directory. In main window, the user can see information view. By menu item, user can open information for researching.\
+In result of scanning all string resources accumulate in the working directory. In main window, the user can see information view. By a menu item, user can open information for researching.\
  \
 \pard\tx560\pardeftab560\pardirnatural\qc
 

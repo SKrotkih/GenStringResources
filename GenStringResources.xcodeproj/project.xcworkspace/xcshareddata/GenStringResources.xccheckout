@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>0302DF16-30ED-4246-9B3E-697034F3E98A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>GenStringResources</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CFA08A6B7E10AD3B5F7A341FEEA41E080805C50E</key>
 		<string>https://github.com/SKrotkih/GenStringResources.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GenStringResources.xcodeproj</string>
+	<string>GenStringResources.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CFA08A6B7E10AD3B5F7A341FEEA41E080805C50E</key>

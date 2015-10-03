@@ -22,17 +22,25 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
 
 @synthesize appController;
 
-+ (QOSummaryStrings* ) sharedSummaryStrings
++ (QOSummaryStrings*) sharedInstance
 {
-	static QOSummaryStrings* _sharedSummaryStrings = nil;
-	
-	if (_sharedSummaryStrings == nil)
-	{
-		_sharedSummaryStrings = [[QOSummaryStrings alloc] init];
-        _sharedSummaryStrings.appController = [GenStringResourcesController appController];
-	}
-	
-	return _sharedSummaryStrings;
+    static QOSummaryStrings* instance;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
+        instance = [[QOSummaryStrings alloc] init];
+    });
+    
+    return instance;
+}
+
+- (id) init
+{
+    if ((self = [super init]))
+    {
+        self.appController = [GenStringResourcesController appController];
+    }
+    
+    return self;
 }
 
 - (void) dealloc
@@ -42,7 +50,9 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
 	[super dealloc];
 }
 
-- (void)alertDidEnd: (NSAlert* )alert returnCode: (NSInteger)returnCode contextInfo: (void* )contextInfo 
+- (void) alertDidEnd: (NSAlert*) alert
+          returnCode: (NSInteger) returnCode
+         contextInfo: (void*) contextInfo
 {
     if ([(NSString*)contextInfo isEqualToString: @"Error in settings"] == YES) 
     {
@@ -52,7 +62,8 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
     }
 }
 
--(void) removeTabViewItemForName: (NSString*) aName tabView: (NSTabView*)aTabView
+- (void) removeTabViewItemForName: (NSString*) aName
+                          tabView: (NSTabView*) aTabView
 {
     int tabViewCount = [aTabView numberOfTabViewItems];
     int tabViewItemIndex;
@@ -344,11 +355,14 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
     
     [appController.progressBar stopAnimation: self];
     [appController enableToolbar: YES];
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                      NSLocalizedString(@"No issues", @"No issues"));
     [plistProjects release];
     [tabViewMain release];
     [pool release];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
 }
 
 #pragma mark -
@@ -357,8 +371,8 @@ static NSString* const ACTUAL_DICTIONARY = @"Actual dictionary";
 {
     [appController enableToolbar: NO];
     thread = [[NSThread alloc] initWithTarget: self
-                                               selector: @selector(scanThread)
-                                                 object: nil];
+                                     selector: @selector(scanThread)
+                                       object: nil];
     [thread start];
 }
 

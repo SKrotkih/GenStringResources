@@ -159,8 +159,8 @@
         NSArray* key_value = [aStr componentsSeparatedByString: @" = "];
         if (2 == [key_value count]) 
         {
-            *aKey = [NSString stringWithString: [key_value objectAtIndex: 0]];
-            *aValue = [NSString stringWithString: [key_value objectAtIndex: 1]];
+            *aKey = [[NSString stringWithString: [key_value objectAtIndex: 0]] mutableCopy];
+            *aValue = [[NSString stringWithString: [key_value objectAtIndex: 1]] mutableCopy];
             return YES;
         }
     }
@@ -637,7 +637,7 @@
          if (result == NSOKButton) 
          {
              [savePanel orderOut: self];
-             [aObj performSelector: aSelector withObject: [savePanel filename] afterDelay:0.0];             
+             [aObj performSelector: aSelector withObject: [[savePanel URL] absoluteString] afterDelay:0.0];
          }
      }];
 }
@@ -652,7 +652,7 @@
          if (result == NSOKButton) 
          {
              [savePanel orderOut: self];
-             [aObj performSelector: aSelector withObject: [savePanel filename] afterDelay:0.0];             
+             [aObj performSelector: aSelector withObject: [[savePanel URL] absoluteString] afterDelay:0.0];
          }
      }];
 }
@@ -667,7 +667,7 @@
          if (result == NSOKButton) 
          {
              [openPanel orderOut: self];
-             [aObj performSelector: aSelector withObject: [openPanel filename] afterDelay:0.0];             
+             [aObj performSelector: aSelector withObject: [[openPanel URL] absoluteString] afterDelay:0.0];
          }
      }];
 }

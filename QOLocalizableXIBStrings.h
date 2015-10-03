@@ -18,7 +18,7 @@
 
 @property(nonatomic, assign) GenStringResourcesController* appController;
 
-+ (QOLocalizableXIBStrings *) sharedLocalizableXIBStrings;
++ (QOLocalizableXIBStrings *) sharedInstance;
 - (void) startScan;
 - (void) openProject;
 

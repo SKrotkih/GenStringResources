@@ -97,10 +97,14 @@
     }
 }
 
--(void) saveContentToFile: (NSString*)fileName
+-(void) saveContentToFile: (NSString*) fileName
 {
     NSError* error = nil;
-    [[textView string] writeToFile: fileName atomically: YES encoding: NSUTF16StringEncoding error: &error];    
+
+    [[textView string] writeToFile: fileName
+                        atomically: YES
+                          encoding: NSUTF16StringEncoding
+                             error: &error];
 }
 
 -(void) save: (id) sender
@@ -117,7 +121,7 @@
          if (result == NSOKButton) 
          {
              [savePanel orderOut: self];
-             [self saveContentToFile: [savePanel filename]];
+             [self saveContentToFile: [[savePanel URL] absoluteString]];
          }
      }];
 }

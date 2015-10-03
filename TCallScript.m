@@ -200,15 +200,12 @@
 						paramStr = @"";
 					}
 					
-                    /* create the error message string */
-					NSString *err = [NSString stringWithFormat: @"Error %@ occured the %@(%@) call: %@",
-                                     [errorInfo objectForKey: NSAppleScriptErrorNumber],
-                                     handlerName, 
-                                     paramStr,
-                                     [errorInfo objectForKey: NSAppleScriptErrorBriefMessage]];
-                    
                     /* display an alert panel showing the error */
-					NSRunAlertPanel(@"AttachAScript Error", err, @"ok", nil, nil);
+                    NSRunAlertPanel(@"AttachAScript Error", @"Error %@ occured the %@(%@) call: %@",
+                                    [errorInfo objectForKey: NSAppleScriptErrorNumber],
+                                    handlerName,
+                                    paramStr,
+                                    [errorInfo objectForKey: NSAppleScriptErrorBriefMessage], @"ok", nil, nil);
 				}
 				
                 /* return whatever result the script returned */

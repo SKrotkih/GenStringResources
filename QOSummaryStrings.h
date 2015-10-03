@@ -18,7 +18,7 @@
 
 @property(nonatomic, assign) GenStringResourcesController* appController;
 
-+ (QOSummaryStrings*) sharedSummaryStrings;
++ (QOSummaryStrings*) sharedInstance;
 - (void) startScan;
 
 @end

@@ -115,7 +115,7 @@
          if (result == NSOKButton) 
          {
              [savePanel orderOut: self];
-             [self saveContentToFile: [savePanel filename]];
+             [self saveContentToFile: [[savePanel URL] absoluteString]];
          }
      }];
 }

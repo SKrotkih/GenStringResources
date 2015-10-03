@@ -14,11 +14,12 @@
 		7F3D477C1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */; };
 		7F5D16DC132E5CB4008BF0A8 /* QOSummaryStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */; };
 		7F5D1769132E7754008BF0A8 /* QOSummaryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */; };
-		7F5D8C771B611F3A000C3C54 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D8C761B611F3A000C3C54 /* README.md */; };
 		7F640073167B201C004B5645 /* CopyingModulesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F640072167B201C004B5645 /* CopyingModulesWindowController.m */; };
 		7F640076167B32CE004B5645 /* CopyingModulesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F640074167B32CE004B5645 /* CopyingModulesWindowController.xib */; };
 		7F9795241316A716007442FD /* Projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F9795231316A716007442FD /* Projects.plist */; };
 		7FB20BAC16790EC000E88AC8 /* buildproject.scpt in Resources */ = {isa = PBXBuildFile; fileRef = CE4545321388DC27006D4F8B /* buildproject.scpt */; };
+		7FC008DC1BBFE4FE00018169 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D8C761B611F3A000C3C54 /* README.md */; settings = {ASSET_TAGS = (); }; };
+		7FC008DD1BBFE51400018169 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CE61958B1341829300330B54 /* ReadMe.rtf */; settings = {ASSET_TAGS = (); }; };
 		8D11072B0486CEB800E47090 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* Localizable.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -36,7 +37,6 @@
 		CE4545061388C239006D4F8B /* QOModuleStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4545051388C239006D4F8B /* QOModuleStrings.m */; };
 		CE4545151388D80D006D4F8B /* AEDescUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4545141388D80D006D4F8B /* AEDescUtils.m */; };
 		CE61954713417A2F00330B54 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE61954613417A2F00330B54 /* SettingsWindow.xib */; };
-		CE61958C1341829300330B54 /* ReadMe.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CE61958B1341829300330B54 /* ReadMe.rtf */; };
 		CE7DBF91138E097300A0E4EB /* xcodebuild.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7DBF90138E097300A0E4EB /* xcodebuild.plist */; };
 		CE82657B1326014B000A2884 /* QOXIBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82657A1326014B000A2884 /* QOXIBTableView.m */; };
 		CE861D7913152B8C00ADCCC8 /* icon.ico in Resources */ = {isa = PBXBuildFile; fileRef = CE861D7813152B8C00ADCCC8 /* icon.ico */; };
@@ -165,27 +165,9 @@
 				CE05AF91138782E1003233C9 /* Scripts */,
 				7F39FF8E1330C1B800CE89EE /* Archiv */,
 				CE88F73F130E232F00D366CA /* Lib */,
-				256AC3D80F4B6AC300CF3369 /* GenStringResourcesAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m */,
-				CEA633F113080696000F5CE3 /* GenStringResourcesController.h */,
-				CEA633F213080696000F5CE3 /* GenStringResourcesController.mm */,
-				CE28B76413465166007AC551 /* GenStringResourcesTableView.h */,
-				CE28B76513465166007AC551 /* GenStringResourcesTableView.m */,
-				CE861DDB131550CA00ADCCC8 /* QOSettingsController.h */,
-				CE861DDC131550CA00ADCCC8 /* QOSettingsController.m */,
-				CE61954613417A2F00330B54 /* SettingsWindow.xib */,
-				7F39FF8B1330BE8100CE89EE /* QOStringsTableView.h */,
-				7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */,
-				CE8265791326014B000A2884 /* QOXIBTableView.h */,
-				CE82657A1326014B000A2884 /* QOXIBTableView.m */,
-				7F5D1767132E7754008BF0A8 /* QOSummaryTableView.h */,
-				7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */,
-				CE8CD67D13265F68008198F1 /* GenStringResources.h */,
-				CE8CD67E13265F68008198F1 /* GenStringResources.m */,
-				CE8CD68013265F92008198F1 /* QOLocalizableXIBStrings.h */,
-				CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */,
-				7F5D16DA132E5CB4008BF0A8 /* QOSummaryStrings.h */,
-				7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */,
+				7FC008DA1BBFE03500018169 /* Settings */,
+				7FC008DB1BBFE0A700018169 /* Summary */,
+				7FC008DE1BBFE98B00018169 /* Scanners */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -232,6 +214,10 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CE8CD67D13265F68008198F1 /* GenStringResources.h */,
+				CE8CD67E13265F68008198F1 /* GenStringResources.m */,
+				256AC3D80F4B6AC300CF3369 /* GenStringResourcesAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* GenStringResourcesAppDelegate.m */,
 				256AC3F00F4B6AF500CF3369 /* GenStringResources_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -274,6 +260,44 @@
 				7F3D477A1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m */,
 			);
 			name = Archiv;
+			sourceTree = "<group>";
+		};
+		7FC008DA1BBFE03500018169 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE861DDB131550CA00ADCCC8 /* QOSettingsController.h */,
+				CE861DDC131550CA00ADCCC8 /* QOSettingsController.m */,
+				CE61954613417A2F00330B54 /* SettingsWindow.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		7FC008DB1BBFE0A700018169 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D1767132E7754008BF0A8 /* QOSummaryTableView.h */,
+				7F5D1768132E7754008BF0A8 /* QOSummaryTableView.m */,
+				7F5D16DA132E5CB4008BF0A8 /* QOSummaryStrings.h */,
+				7F5D16DB132E5CB4008BF0A8 /* QOSummaryStrings.m */,
+			);
+			name = Summary;
+			sourceTree = "<group>";
+		};
+		7FC008DE1BBFE98B00018169 /* Scanners */ = {
+			isa = PBXGroup;
+			children = (
+				CEA633F113080696000F5CE3 /* GenStringResourcesController.h */,
+				CEA633F213080696000F5CE3 /* GenStringResourcesController.mm */,
+				CE28B76413465166007AC551 /* GenStringResourcesTableView.h */,
+				CE28B76513465166007AC551 /* GenStringResourcesTableView.m */,
+				7F39FF8B1330BE8100CE89EE /* QOStringsTableView.h */,
+				7F39FF8C1330BE8100CE89EE /* QOStringsTableView.m */,
+				CE8265791326014B000A2884 /* QOXIBTableView.h */,
+				CE82657A1326014B000A2884 /* QOXIBTableView.m */,
+				CE8CD68013265F92008198F1 /* QOLocalizableXIBStrings.h */,
+				CE8CD68113265F92008198F1 /* QOLocalizableXIBStrings.m */,
+			);
+			name = Scanners;
 			sourceTree = "<group>";
 		};
 		CE05AF91138782E1003233C9 /* Scripts */ = {
@@ -393,7 +417,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GenStringResources" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -429,9 +453,9 @@
 				CE61954713417A2F00330B54 /* SettingsWindow.xib in Resources */,
 				CE861E631315A57A00ADCCC8 /* Properties.plist in Resources */,
 				7F9795241316A716007442FD /* Projects.plist in Resources */,
-				CE61958C1341829300330B54 /* ReadMe.rtf in Resources */,
 				CE4544EC13884866006D4F8B /* ProjectTreeViewController.xib in Resources */,
 				CE7DBF91138E097300A0E4EB /* xcodebuild.plist in Resources */,
+				7FC008DD1BBFE51400018169 /* ReadMe.rtf in Resources */,
 				CE0F8DB8138FC07C0086E170 /* SyntaxColorDefaults.plist in Resources */,
 				CE0F8DB9138FC07C0086E170 /* SyntaxDefinition.plist in Resources */,
 				CE0F8DC9138FC10D0086E170 /* CSS 1.plist in Resources */,
@@ -466,7 +490,7 @@
 				7F39FF8D1330BE8100CE89EE /* QOStringsTableView.m in Sources */,
 				7F3D477B1331FAFE00A2D1E2 /* GenStringResourcesTextView.m in Sources */,
 				7F3D477C1331FAFE00A2D1E2 /* QOLocalizableXIBTextView.m in Sources */,
-				7F5D8C771B611F3A000C3C54 /* README.md in Sources */,
+				7FC008DC1BBFE4FE00018169 /* README.md in Sources */,
 				CE86B399133F437500935937 /* QOCompareStrings.mm in Sources */,
 				CE28B76613465166007AC551 /* GenStringResourcesTableView.m in Sources */,
 				CE4544B413880DB4006D4F8B /* TCallScript.m in Sources */,
@@ -544,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -553,6 +578,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "GenStringResources-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quickoffice.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GenStringResources;
 				SDKROOT = macosx;
 			};
@@ -562,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -569,6 +596,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "GenStringResources-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quickoffice.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = GenStringResources;
 				SDKROOT = macosx;
 			};
@@ -577,7 +605,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -592,7 +620,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

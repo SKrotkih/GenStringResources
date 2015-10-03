@@ -19,17 +19,16 @@ static NSString* const XIBS_TITLE = @"XIBs";
 
 @synthesize appController;
 
-+ (QOLocalizableXIBStrings* ) sharedLocalizableXIBStrings
++ (QOLocalizableXIBStrings*) sharedInstance
 {
-	static QOLocalizableXIBStrings* _sharedLocalizableXIBStrings = nil;
-	
-	if (_sharedLocalizableXIBStrings == nil)
-	{
-		_sharedLocalizableXIBStrings = [[QOLocalizableXIBStrings alloc] init];
-        _sharedLocalizableXIBStrings.appController = [GenStringResourcesController appController];
-	}
-	
-	return _sharedLocalizableXIBStrings;
+    static QOLocalizableXIBStrings* instance;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
+        instance = [[QOLocalizableXIBStrings alloc] init];
+        instance.appController = [GenStringResourcesController appController];
+    });
+    
+    return instance;
 }
 
 - (void) dealloc
@@ -55,8 +54,10 @@ static NSString* const XIBS_TITLE = @"XIBs";
     
     if (result != 0) 
     {
-        NSBeginAlertSheet(NSLocalizedString(@"Error", @"Error"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"Couldn't execute the command. Return code is %d", @"Couldn't execute the command. Return code is %d"), result);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSBeginAlertSheet(NSLocalizedString(@"Error", @"Error"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                              NSLocalizedString(@"Couldn't execute the command. Return code is %d", @"Couldn't execute the command. Return code is %d"), result);
+        });
     }
 }
 
@@ -229,14 +230,17 @@ static NSString* const XIBS_TITLE = @"XIBs";
     if ([QOPlistProcessing getPlistProject: &plistProjects 
                                     window: MAINWINDOW] == NO) 
     {
-        NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil,
-                          MAINWINDOW, 
-                          self, 
-                          @selector(alertDidEnd:returnCode:contextInfo:),
-                          nil,
-                          @"Error in settings",
-                          NSLocalizedString(@"Wrong directory path to the project in the settings. Please check data.", @"Wrong directory path to the project in the settings. Please check data."));
-        [appController enableToolbar: YES];    
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSBeginAlertSheet(NSLocalizedString(@"Warning!", @"Warning!"), nil, nil, nil,
+                              MAINWINDOW,
+                              self,
+                              @selector(alertDidEnd:returnCode:contextInfo:),
+                              nil,
+                              @"Error in settings",
+                              NSLocalizedString(@"Wrong directory path to the project in the settings. Please check data.", @"Wrong directory path to the project in the settings. Please check data."));
+            [appController enableToolbar: YES];
+        });
+        
         [pool release];
         
         return;
@@ -340,9 +344,12 @@ static NSString* const XIBS_TITLE = @"XIBs";
 
     
     [appController.progressBar stopAnimation: self];
-    [appController enableToolbar: YES];    
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                      NSLocalizedString(@"No issues", @"No issues"));
+    [appController enableToolbar: YES];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
     
     [plistProjects release];
     [pool release];
@@ -356,9 +363,13 @@ static NSString* const XIBS_TITLE = @"XIBs";
     rootResultDirectory = [rootResultDirectory stringByAppendingString: [NSString stringWithFormat: @"/%@", XIBS_TITLE]];    
     if ([[NSFileManager defaultManager] fileExistsAtPath: rootResultDirectory] == NO)
     {
-        [appController enableToolbar: YES];            
-        NSBeginAlertSheet(NSLocalizedString(@"Couldn't find data", @"Couldn't find data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"Please start the process of the XIBs scanning", @"Please start the process of the XIBs scanning"));
+        [appController enableToolbar: YES];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSBeginAlertSheet(NSLocalizedString(@"Couldn't find data", @"Couldn't find data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                              NSLocalizedString(@"Please start the process of the XIBs scanning", @"Please start the process of the XIBs scanning"));
+        });
+
         [pool release];
         return;    
     }
@@ -442,9 +453,12 @@ static NSString* const XIBS_TITLE = @"XIBs";
     [tabViewMain release];    
     
     [appController.progressBar stopAnimation: self];
-    [appController enableToolbar: YES];    
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                      NSLocalizedString(@"No issues", @"No issues"));
+    [appController enableToolbar: YES];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
     
     [pool release];
 }

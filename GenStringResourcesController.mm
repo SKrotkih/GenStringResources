@@ -129,43 +129,43 @@ static GenStringResourcesController* _appController = nil;
 
 - (IBAction) startScanLocalizableStrings: (id) sender
 {
-    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedInstance];
     [localizableStrings startScanStrings];
 }
 
 - (IBAction) open: (id) sender
 {
-    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedInstance];
     [localizableStrings openProject];
 }
 
 - (IBAction) startScanProjectModules: (id) sender
 {
-    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedInstance];
     [localizableStrings startScanModules];
 }
 
 - (IBAction) openProjectModules: (id) sender
 {
-    GenStringResources* localizableStrings = [GenStringResources sharedLocalizableStrings];
+    GenStringResources* localizableStrings = [GenStringResources sharedInstance];
     [localizableStrings openProjectModules];
 }
 
 - (IBAction) startScanXIBStrings: (id) sender
 {
-    QOLocalizableXIBStrings* localizableXIBStrings = [QOLocalizableXIBStrings sharedLocalizableXIBStrings];
+    QOLocalizableXIBStrings* localizableXIBStrings = [QOLocalizableXIBStrings sharedInstance];
     [localizableXIBStrings startScan];
 }
 
 - (IBAction) openXIBs: (id) sender
 {
-    QOLocalizableXIBStrings* localizableXIBStrings = [QOLocalizableXIBStrings sharedLocalizableXIBStrings];
+    QOLocalizableXIBStrings* localizableXIBStrings = [QOLocalizableXIBStrings sharedInstance];
     [localizableXIBStrings openProject];
 }
 
 - (IBAction) showSummary: (id) sender
 {
-    QOSummaryStrings* summaryStrings = [QOSummaryStrings sharedSummaryStrings];
+    QOSummaryStrings* summaryStrings = [QOSummaryStrings sharedInstance];
     [summaryStrings startScan];
 }
 

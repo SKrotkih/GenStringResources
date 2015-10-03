@@ -188,8 +188,7 @@
                                  toXibFile: oldXibFileName 
                               parentWindow: MAINWINDOW] == YES)
                 {
-                    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                                      [NSString stringWithFormat: NSLocalizedString(@"New string resources were saved to the '%@' project", @"New string resources were saved to the '%@' project"), projectName]);
+                    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, NSLocalizedString(@"New string resources were saved to the '%@' project", @"New string resources were saved to the '%@' project"), projectName);
                 }
             }
             else 
@@ -198,16 +197,14 @@
                             toXibFile: oldXibFileName
                           toDirectory: directoryName] == YES)
                 {
-                    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                                      [NSString stringWithFormat: NSLocalizedString(@"Data were saved to the directory '%@'", @"Data were saved to the directory '%@'"), directoryName]);
+                    NSBeginAlertSheet(NSLocalizedString(@"Data were saved successfully", @"Data were saved successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, NSLocalizedString(@"Data were saved to the directory '%@'", @"Data were saved to the directory '%@'"), directoryName);
                 }
             }
         }
     }
     else 
     {
-        NSBeginAlertSheet(NSLocalizedString(@"Couldn't save data!", @"Couldn't save data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          NSLocalizedString(@"The list data for importing to the XIBs is empty!", @"The list data for importing to the XIBs is empty!"));
+        NSBeginAlertSheet(NSLocalizedString(@"Couldn't save data!", @"Couldn't save data"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, NSLocalizedString(@"The list data for importing to the XIBs is empty!", @"The list data for importing to the XIBs is empty!"));
     }
     [array release];
 }
@@ -250,7 +247,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath: directoryName] == NO) 
     {
         NSBeginAlertSheet(NSLocalizedString(@"Couldn't save data!", @"Couldn't save data!"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil, 
-                          [NSString stringWithFormat: NSLocalizedString(@"Directory '%@' not found!", @"Directory '%@' not found!"), directoryName]);
+                          NSLocalizedString(@"Directory '%@' not found!", @"Directory '%@' not found!"), directoryName);
         return;
     }
 

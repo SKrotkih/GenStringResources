@@ -279,7 +279,7 @@
 
     NSString* buildConfigurationType = @"Debug";
     NSString* plistPath = [[NSBundle mainBundle] pathForResource: @"xcodebuild" ofType: @"plist"];
-	NSMutableArray* arrayContent = [[NSArray arrayWithContentsOfFile: plistPath] retain];
+	NSMutableArray* arrayContent = [[NSArray arrayWithContentsOfFile: plistPath] mutableCopy];
     NSEnumerator* arrayContentEnumerator = [arrayContent objectEnumerator];
     NSDictionary* xcodebuildAttributes;
     while ((xcodebuildAttributes = [arrayContentEnumerator nextObject])) 
@@ -307,7 +307,7 @@
     NSString* target = targetOfBuild;
     NSString* plistPath = [[NSBundle mainBundle] pathForResource: @"xcodebuild" 
                                                           ofType: @"plist"];
-	NSMutableArray* arrayContent = [[NSArray arrayWithContentsOfFile: plistPath] retain];
+	NSMutableArray* arrayContent = [[NSArray arrayWithContentsOfFile: plistPath] mutableCopy];
     NSEnumerator* arrayContentEnumerator = [arrayContent objectEnumerator];
     NSDictionary* xcodebuildAttributes;
     NSString* configurationType = @"Debug"; // by default
@@ -485,7 +485,7 @@
          if (result == NSOKButton) 
          {
              [savePanel orderOut: self];
-             NSString* fileName = [savePanel filename];
+             NSString* fileName = [[savePanel URL] absoluteString];
              
              NSEnumerator* srcStream = [projectTree objectEnumerator];    
              NSString* src;
@@ -586,7 +586,9 @@
 
 #pragma mark NSOutlineViewDelegate protocol handle
 
-- (id)outlineView: (NSOutlineView *) outlineView child: (int) index ofItem: (id) item
+- (id)outlineView: (NSOutlineView *) outlineView
+            child: (NSInteger) index
+           ofItem: (id) item
 {
 	if( !item )
 		return projectTree;
@@ -608,7 +610,8 @@
     return countOfChildren > 0;
 }
 
-- (int)outlineView: (NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item
+- (NSInteger) outlineView: (NSOutlineView *)outlineView
+   numberOfChildrenOfItem: (id)item
 {
 	if( item == self || item == nil )
 		return 1;

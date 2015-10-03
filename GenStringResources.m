@@ -33,20 +33,28 @@ static NSString* const MODULES_TITLE = @"Modules";
 
 @synthesize appController, scanQueue;
 
-+ (GenStringResources* ) sharedLocalizableStrings
++ (GenStringResources* ) sharedInstance
 {
-	static GenStringResources*  _sharedLocalizableStrings = nil;
-	
-	if (_sharedLocalizableStrings == nil)
-	{
-		_sharedLocalizableStrings = [[GenStringResources alloc] init];
-        _sharedLocalizableStrings.scanQueue = [[NSOperationQueue alloc] init];
-        _sharedLocalizableStrings.scanQueue.name = @"ScanOfLocalizableStrings";
-        _sharedLocalizableStrings.scanQueue.MaxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
-        _sharedLocalizableStrings.appController = [GenStringResourcesController appController];
-	}
-	
-	return _sharedLocalizableStrings;
+    static GenStringResources* instance;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
+        instance = [[GenStringResources alloc] init];
+    });
+    
+    return instance;
+}
+
+- (id) init
+{
+    if ((self = [super init]))
+    {
+        self.scanQueue = [[NSOperationQueue alloc] init];
+        self.scanQueue.name = @"ScanOfLocalizableStrings";
+        self.scanQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+        self.appController = [GenStringResourcesController appController];
+    }
+    
+    return self;
 }
 
 - (void) dealloc
@@ -345,9 +353,11 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController.progressBar stopAnimation: self];
     [appController enableToolbar: YES];
-    
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                      NSLocalizedString(@"No issues", @"No issues"));
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
     
     [plistProjects release];
     [pool release];
@@ -651,8 +661,11 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController.progressBar stopAnimation: self];
     [appController enableToolbar: YES];
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                      NSLocalizedString(@"No issues", @"No issues"));
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
     
     [plistProjects release];
     [pool release];
@@ -839,8 +852,12 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController enableToolbar: YES];
     [appController.progressBar stopAnimation: self];
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                      NSLocalizedString(@"No issues", @"No issues"));
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
+
     [pool release];
 }
 
@@ -1055,8 +1072,12 @@ routineNSLocalizedString: (NSString*) aRoutineNSLocalizedString
     
     [appController enableToolbar: YES];
     [appController.progressBar stopAnimation: self];
-    NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                      NSLocalizedString(@"No issues", @"No issues"));
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSBeginAlertSheet(NSLocalizedString(@"Scan data has finished successfully", @"Scan data has finished successfully"), nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
+                          NSLocalizedString(@"No issues", @"No issues"));
+    });
+
     [pool release];
 }
 

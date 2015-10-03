@@ -23,8 +23,8 @@
 - (void) awakeFromNib
 {
 	NSString* plistPath = [[NSBundle mainBundle] pathForResource: @"Projects" ofType: @"plist"];
-	arrayControllerContent = [[NSArray arrayWithContentsOfFile: plistPath] retain];
-	arrayContent = [[NSArray arrayWithContentsOfFile: plistPath] retain];    
+	arrayControllerContent = [[NSArray arrayWithContentsOfFile: plistPath] mutableCopy];
+	arrayContent = [[NSArray arrayWithContentsOfFile: plistPath] mutableCopy];
     
 	[projectsTableView setSortDescriptors: [NSArray arrayWithObjects:   [[[NSSortDescriptor alloc] initWithKey: @"name" 
                                                                                                      ascending: YES] autorelease],
@@ -233,11 +233,11 @@
              [openPanel orderOut: self]; // close panel before we might present an error
              if ([sender tag] == 0) 
              {
-                 [valueOfAttribute setStringValue: [openPanel filename]];
+                 [valueOfAttribute setStringValue: [[openPanel URL] absoluteString]];
              }
              else if ([sender tag] == 1)
              {
-                 [resultDirTextField setStringValue: [openPanel filename]];
+                 [resultDirTextField setStringValue: [[openPanel URL] absoluteString]];
              }
          }
      }];
@@ -262,7 +262,7 @@
 - (IBAction) addProject: (id) sender
 {
     NSArray* keys = [[NSArray alloc] initWithObjects: @"id", @"name", @"RoutineLocalizedString", @"RootPath", @"ResourcesPath", @"XIBsPath", @"listOfExtensions", @"enable", nil];
-    NSArray* objs = [[NSArray alloc] initWithObjects: [NSString stringWithFormat: @"%d", [self nextId]], @"Project name", @"", @"", @"", @"", @"", @"1", nil];
+    NSArray* objs = [[NSArray alloc] initWithObjects: [NSString stringWithFormat: @"%ld", (long)[self nextId]], @"Project name", @"", @"", @"", @"", @"", @"1", nil];
     NSDictionary* dict = [[NSDictionary alloc] initWithObjects: objs 
                                                        forKeys: keys];
     [arrayContent addObject: dict];

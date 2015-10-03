@@ -15,7 +15,7 @@ static NSString* const MODULES_TITLE = @"Modules";
 
 @implementation CopyingModulesWindowController
 
-@synthesize title;
+@synthesize title, userInfo;
 
 - (id) initWithModulesTreeAray: (NSArray*) aModulesTree
                      operation: (OperationOnModules) aOperationOnModules
@@ -97,7 +97,7 @@ static NSString* const MODULES_TITLE = @"Modules";
          {
              [openPanel orderOut: self]; // close panel before we might present an error
              
-             NSString* path = [openPanel filename];
+             NSString* path = [[openPanel URL] absoluteString];
              
              if (![path hasSuffix: @"/"])
              {
@@ -330,12 +330,12 @@ static NSString* const MODULES_TITLE = @"Modules";
         if (errorsCount > 0)
         {
             NSBeginAlertSheet(@"Warning!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                              @"While processing found %i errors! Was copied %i files. Already existed %i.", errorsCount, filesToCopyCount, filesAlreadyExistsCount);
+                              @"While processing found %li errors! Was copied %li files. Already existed %li.", (long)errorsCount,  (long)filesToCopyCount, (long)filesAlreadyExistsCount);
         }
         else
         {
             NSBeginAlertSheet(@"Operation has been finished successful!", nil, nil, nil, MAINWINDOW, nil, nil, nil, nil,
-                              @"%i files was copied. Already existed %i.", filesToCopyCount, filesAlreadyExistsCount);
+                              @"%li files was copied. Already existed %li.", (long)filesToCopyCount, (long)filesAlreadyExistsCount);
         }
     }
 }

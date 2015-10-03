@@ -1398,7 +1398,7 @@ static BOOL			sSyntaxColoredTextDocPrefsInited = NO;
 		lastBreakChar = theCh;
 	}
 	
-	[status setStringValue: [NSString stringWithFormat: @"Characters %u to %u", theRange.location +1, theRange.location +theRange.length]];
+	[status setStringValue: [NSString stringWithFormat: @"Characters %lu to %lu", theRange.location +1, theRange.location +theRange.length]];
 	[self scrollRangeToVisible: theRange];
 	[self setSelectedRange: theRange];
 }
@@ -1414,8 +1414,7 @@ static BOOL			sSyntaxColoredTextDocPrefsInited = NO;
 	if( startCh == 0 || startCh > [[self string] length] )
 		return;
 	
-	[status setStringValue: [NSString stringWithFormat: @"Characters %u to %u",
-                             theRange.location +1, theRange.location +theRange.length]];
+	[status setStringValue: [NSString stringWithFormat: @"Characters %lu to %lu", theRange.location +1, theRange.location +theRange.length]];
 	[self scrollRangeToVisible: theRange];
 	[self setSelectedRange: theRange];
 }

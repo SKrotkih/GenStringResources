@@ -21,7 +21,7 @@
 @property(nonatomic, assign) GenStringResourcesController* appController;
 @property(nonatomic, readwrite, assign) NSOperationQueue* scanQueue;
 
-+ (GenStringResources *) sharedLocalizableStrings;
++ (GenStringResources *) sharedInstance;
 - (void) startScanStrings;
 - (void) startScanModules;
 - (void) openProject;
